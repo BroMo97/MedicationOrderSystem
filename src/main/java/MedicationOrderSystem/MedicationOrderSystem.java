@@ -12,6 +12,6 @@ package MedicationOrderSystem;
 public class MedicationOrderSystem {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello ProgEx!");
     }
 }
