@@ -4,9 +4,14 @@
  */
 package MedicationOrderSystem;
 
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.KeyEvent;
+import javax.swing.JTextField;
 /**
  *
- * @author Tüwüm
+ * @author OENAL
  */
 public class Login extends javax.swing.JFrame {
 
@@ -15,6 +20,22 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        addPlaceholderStyle(LoginUsernameFld);
+        addPlaceholderStyle(LoginPasswordFld);
+    }
+    
+    public void addPlaceholderStyle(JTextField textField){
+        Font font = textField.getFont();
+        font = font.deriveFont(Font.ITALIC);
+        textField.setFont(font);
+        textField.setForeground(Color.gray);
+    }
+    
+    public void removePlaceholderStyle(JTextField textField){
+        Font font = textField.getFont();
+        font = font.deriveFont(Font.PLAIN|Font.BOLD);
+        textField.setFont(font);
+        textField.setForeground(Color.black);
     }
 
     /**
@@ -26,136 +47,173 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LoginUsernameFld = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        LoginPasswordFld = new javax.swing.JPasswordField();
+        LoginRegistrationBtn = new javax.swing.JButton();
+        LoginPasswordResetBtn = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Medication Order System");
-        setEnabled(false);
-        setIconImages(null);
-        setMaximumSize(new java.awt.Dimension(435, 690));
-        setMinimumSize(new java.awt.Dimension(435, 690));
-        setName("login_mainframe"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(435, 690));
-        setResizable(false);
-        setSize(new java.awt.Dimension(435, 690));
+        setTitle("MOS System");
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MedicationOrderSystem/MOSLogo.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setText("MOS System");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 35, -1, -1));
+        jLabel1.getAccessibleContext().setAccessibleParent(null);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("MOS Login");
-        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\MOSLogo.png")); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 95, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Username");
-        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-password-50.png")); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
+
+        LoginUsernameFld.setText("Username");
+        LoginUsernameFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                LoginUsernameFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                LoginUsernameFldFocusLost(evt);
+            }
+        });
+        LoginUsernameFld.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LoginUsernameFldKeyPressed(evt);
+            }
+        });
+        getContentPane().add(LoginUsernameFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 219, 37));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Password");
-        jLabel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel4.setMaximumSize(new java.awt.Dimension(123, 31));
-        jLabel4.setMinimumSize(new java.awt.Dimension(123, 31));
-        jLabel4.setPreferredSize(new java.awt.Dimension(123, 31));
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-username-50.png")); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("Enter here");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        LoginPasswordFld.setText("Password");
+        LoginPasswordFld.setEchoChar('\u0000');
+        LoginPasswordFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                LoginPasswordFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                LoginPasswordFldFocusLost(evt);
             }
         });
-
-        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPasswordField1.setText("login_pwdFld");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+        LoginPasswordFld.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LoginPasswordFldKeyPressed(evt);
             }
         });
+        getContentPane().add(LoginPasswordFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 219, 37));
 
-        jButton1.setText("Registration");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        LoginRegistrationBtn.setText("Registration");
+        LoginRegistrationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                LoginRegistrationBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(LoginRegistrationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, -1, -1));
 
-        jButton2.setText("Login");
+        LoginPasswordResetBtn.setText("Password reset");
+        getContentPane().add(LoginPasswordResetBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField1)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11))
-        );
+        LoginLoginbtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-login-50.png")); // NOI18N
+        LoginLoginbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginLoginbtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LoginLoginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 50, 50));
+
+        jLabel5.setToolTipText("");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 350, 650));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void LoginRegistrationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginRegistrationBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        new Registration().setVisible(true);
+    }//GEN-LAST:event_LoginRegistrationBtnActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void LoginUsernameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+        if(LoginUsernameFld.getText().equals("Username")){
+            LoginUsernameFld.setText(null);
+            LoginUsernameFld.requestFocus();
+            removePlaceholderStyle(LoginUsernameFld);
+        }
+    }//GEN-LAST:event_LoginUsernameFldFocusGained
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void LoginPasswordFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginPasswordFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        if(LoginPasswordFld.getText().equals("Password")){
+            LoginPasswordFld.setText(null);
+            LoginPasswordFld.requestFocus();
+            LoginPasswordFld.setEchoChar('\u2022');
+            removePlaceholderStyle(LoginPasswordFld);
+        }
+    }//GEN-LAST:event_LoginPasswordFldFocusGained
+
+    private void LoginUsernameFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameFldFocusLost
+        // TODO add your handling code here:
+        if(LoginUsernameFld.getText().length()==0){
+            addPlaceholderStyle(LoginUsernameFld);
+            LoginUsernameFld.setText("Username");
+        }
+    }//GEN-LAST:event_LoginUsernameFldFocusLost
+
+    private void LoginPasswordFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginPasswordFldFocusLost
+        // TODO add your handling code here:
+        if(LoginPasswordFld.getText().length()==0){
+            addPlaceholderStyle(LoginPasswordFld);
+            LoginPasswordFld.setText("Password");
+            LoginPasswordFld.setEchoChar('\u0000');
+        }
+    }//GEN-LAST:event_LoginPasswordFldFocusLost
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+        this.requestFocusInWindow();
+    }//GEN-LAST:event_formWindowGainedFocus
+
+    private void LoginPasswordFldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginPasswordFldKeyPressed
+        // TODO add your handling code here:
+        int key = evt.getKeyCode();
+        
+        if(key == KeyEvent.VK_ENTER){
+            LoginLoginbtn.doClick();
+        }
+    }//GEN-LAST:event_LoginPasswordFldKeyPressed
+
+    private void LoginLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginLoginbtnActionPerformed
+        // TODO add your handling code here:
+        new User().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_LoginLoginbtnActionPerformed
+
+    private void LoginUsernameFldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginUsernameFldKeyPressed
+        // TODO add your handling code here:
+        int key = evt.getKeyCode();
+        
+        if(key == KeyEvent.VK_ENTER){
+            LoginLoginbtn.doClick();
+        }
+    }//GEN-LAST:event_LoginUsernameFldKeyPressed
 
     /**
      * @param args the command line arguments
@@ -193,13 +251,16 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private final javax.swing.JButton LoginLoginbtn = new javax.swing.JButton();
+    private javax.swing.JPasswordField LoginPasswordFld;
+    private javax.swing.JButton LoginPasswordResetBtn;
+    private javax.swing.JButton LoginRegistrationBtn;
+    private javax.swing.JTextField LoginUsernameFld;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+
 }

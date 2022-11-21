@@ -5,6 +5,7 @@
 
 package MedicationOrderSystem;
 
+
 /**
  *
  * @author Tüwüm
@@ -13,5 +14,6 @@ public class MedicationOrderSystem {
 
     public static void main(String[] args) {
         System.out.println("Hello ProgEx!");
+        new Login().setVisible(true);
     }
 }

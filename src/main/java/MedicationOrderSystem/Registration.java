@@ -4,9 +4,14 @@
  */
 package MedicationOrderSystem;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
- * @author Tüwüm
+ * @author OENAL
  */
 public class Registration extends javax.swing.JFrame {
 
@@ -15,8 +20,47 @@ public class Registration extends javax.swing.JFrame {
      */
     public Registration() {
         initComponents();
+        addPlaceholderStyle(RegistrationUsernameFld);
+        addPlaceholderStyle(RegistrationFirstnameFld);
+        addPlaceholderStyle(RegistrationMailFld);
+        addPlaceholderStyle(RegistrationLastnameFld);
+        addPlaceholderStyle(RegistrationPasswordFld);
+        addPlaceholderStyle(RegistrationAddressFld);
+        addPlaceholderStyle(RegistrationRepeatFld);
+        addPlaceholderStyle(RegistrationPhoneFld);
+        addPlaceholderStyle(RegistrationGenderBox);
     }
-
+    
+    public void addPlaceholderStyle(JTextField textField){
+        Font font = textField.getFont();
+        font = font.deriveFont(Font.ITALIC);
+        textField.setFont(font);
+        textField.setForeground(Color.gray);
+    }
+    
+    public void addPlaceholderStyle(JComboBox comboBox){
+        Font font = comboBox.getFont();
+        font = font.deriveFont(Font.ITALIC);
+        comboBox.setFont(font);
+        comboBox.setForeground(Color.gray);
+    }
+    
+    public void removePlaceholderStyle(JTextField textField){
+        Font font = textField.getFont();
+        font = font.deriveFont(Font.PLAIN|Font.BOLD);
+        textField.setFont(font);
+        textField.setForeground(Color.black);
+    }
+    
+    public void removePlaceholderStyle(JComboBox comboBox){
+        Font font = comboBox.getFont();
+        font = font.deriveFont(Font.PLAIN|Font.BOLD);
+        comboBox.setFont(font);
+        comboBox.setForeground(Color.black);
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,115 +70,170 @@ public class Registration extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jCalendar1 = new com.toedter.calendar.JCalendar();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        RegistrationFirstnameFld = new javax.swing.JTextField();
+        RegistrationMailFld = new javax.swing.JTextField();
+        RegistrationLastnameFld = new javax.swing.JTextField();
+        RegistrationUsernameFld = new javax.swing.JTextField();
+        RegistrationPasswordFld = new javax.swing.JTextField();
+        RegistrationAddressFld = new javax.swing.JTextField();
+        RegistrationRepeatFld = new javax.swing.JTextField();
+        RegistrationBirthday = new com.toedter.calendar.JDateChooser();
+        RegistrationAgree = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        RegistrationGenderBox = new javax.swing.JComboBox<>();
+        RegistrationPhoneFld = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registration");
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MedicationOrderSystem/MOSLogo.png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(300, 300));
-        jLabel1.setMinimumSize(new java.awt.Dimension(300, 300));
-        jLabel1.setPreferredSize(new java.awt.Dimension(300, 300));
-
-        jCheckBox1.setText("Agree to our privacy policy");
-        jCheckBox1.setActionCommand("Reg_chckBox");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
             }
         });
 
-        jLabel2.setText("Password");
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\MOSLogo.png")); // NOI18N
 
-        jLabel3.setText("Username");
+        jLabel1.setText("Username");
+
+        jLabel3.setText("Firstname");
 
         jLabel4.setText("Mail");
 
-        jTextField1.setText("Enter Mail");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        jLabel5.setText("Lastname");
+
+        jLabel6.setText("Password");
+
+        jLabel7.setText("Address (street, number, ZIP)");
+
+        jLabel8.setText("Repeat Password");
+
+        jLabel9.setText("Birthday");
+
+        RegistrationFirstnameFld.setText("Firstname");
+        RegistrationFirstnameFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationFirstnameFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationFirstnameFldFocusLost(evt);
             }
         });
 
-        jTextField2.setText("Enter Username");
-        jTextField2.setFocusTraversalPolicyProvider(true);
-        jTextField2.setName(""); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+        RegistrationMailFld.setText("Mail");
+        RegistrationMailFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationMailFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationMailFldFocusLost(evt);
             }
         });
 
-        jPasswordField1.setText("jPasswordField1");
-
-        jLabel5.setText("Repeat Password");
-
-        jPasswordField2.setText("jPasswordField1");
-
-        jLabel6.setText("Address (street, number, ZIP)");
-
-        jLabel7.setText("First Name");
-
-        jLabel8.setText("Last Name");
-
-        jTextField3.setText("Street, Number, ZIP");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+        RegistrationLastnameFld.setText("Lastname");
+        RegistrationLastnameFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationLastnameFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationLastnameFldFocusLost(evt);
             }
         });
 
-        jTextField4.setText("Enter First Name");
-        jTextField4.setFocusTraversalPolicyProvider(true);
-        jTextField4.setName(""); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+        RegistrationUsernameFld.setText("Username");
+        RegistrationUsernameFld.setToolTipText("");
+        RegistrationUsernameFld.setInheritsPopupMenu(true);
+        RegistrationUsernameFld.setName(""); // NOI18N
+        RegistrationUsernameFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationUsernameFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationUsernameFldFocusLost(evt);
             }
         });
 
-        jLabel9.setText("Birthdate (day.month.year)");
-
-        jTextField5.setText("01.01.2000");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+        RegistrationPasswordFld.setText("Password");
+        RegistrationPasswordFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationPasswordFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationPasswordFldFocusLost(evt);
             }
         });
 
-        jTextField6.setText("Enter Last Name");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+        RegistrationAddressFld.setText("Address");
+        RegistrationAddressFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationAddressFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationAddressFldFocusLost(evt);
             }
         });
+        RegistrationAddressFld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrationAddressFldActionPerformed(evt);
+            }
+        });
+
+        RegistrationRepeatFld.setText("Repeat Password");
+        RegistrationRepeatFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationRepeatFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationRepeatFldFocusLost(evt);
+            }
+        });
+
+        RegistrationAgree.setText("Agree to our policy");
+        RegistrationAgree.setToolTipText("");
 
         jButton1.setText("Register");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+
+        jLabel10.setText("Gender");
+
+        RegistrationGenderBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gender", "Male", "Female", "Divers" }));
+        RegistrationGenderBox.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationGenderBoxFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationGenderBoxFocusLost(evt);
             }
         });
+        RegistrationGenderBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrationGenderBoxActionPerformed(evt);
+            }
+        });
+
+        RegistrationPhoneFld.setText("Phone number");
+        RegistrationPhoneFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationPhoneFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationPhoneFldFocusLost(evt);
+            }
+        });
+
+        jLabel11.setText("Phone");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,123 +242,273 @@ public class Registration extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
-                    .addComponent(jPasswordField1)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField6))
-                .addContainerGap(147, Short.MAX_VALUE))
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(RegistrationAgree)))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel8)
+                    .addComponent(RegistrationMailFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationUsernameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationRepeatFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
+                    .addComponent(RegistrationPasswordFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(RegistrationGenderBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9)
+                    .addComponent(RegistrationFirstnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationLastnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationAddressFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationPhoneFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addGap(58, 58, 58))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(293, 293, 293))
+                .addComponent(jButton1)
+                .addGap(190, 190, 190))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 73, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(30, 30, 30)))
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
+                            .addComponent(RegistrationUsernameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistrationFirstnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(RegistrationMailFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistrationLastnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(RegistrationPasswordFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistrationAddressFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(RegistrationRepeatFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistrationBirthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RegistrationAgree)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RegistrationGenderBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RegistrationPhoneFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(24, 24, 24))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void RegistrationAddressFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationAddressFldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_RegistrationAddressFldActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void RegistrationGenderBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationGenderBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_RegistrationGenderBoxActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    
+    private void RegistrationUsernameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationUsernameFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+        if(RegistrationUsernameFld.getText().equals("Username")){
+            RegistrationUsernameFld.setText(null);
+            RegistrationUsernameFld.requestFocus();
+            removePlaceholderStyle(RegistrationUsernameFld);
+        }
+    }//GEN-LAST:event_RegistrationUsernameFldFocusGained
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void RegistrationFirstnameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationFirstnameFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+        if(RegistrationFirstnameFld.getText().equals("Firstname")){
+            RegistrationFirstnameFld.setText(null);
+            RegistrationFirstnameFld.requestFocus();
+            removePlaceholderStyle(RegistrationFirstnameFld);
+        }
+    }//GEN-LAST:event_RegistrationFirstnameFldFocusGained
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void RegistrationMailFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationMailFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+        if(RegistrationMailFld.getText().equals("Mail")){
+            RegistrationMailFld.setText(null);
+            RegistrationMailFld.requestFocus();
+            removePlaceholderStyle(RegistrationMailFld);
+        }
+    }//GEN-LAST:event_RegistrationMailFldFocusGained
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void RegistrationLastnameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationLastnameFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+        if(RegistrationLastnameFld.getText().equals("Lastname")){
+            RegistrationLastnameFld.setText(null);
+            RegistrationLastnameFld.requestFocus();
+            removePlaceholderStyle(RegistrationLastnameFld);
+        }
+    }//GEN-LAST:event_RegistrationLastnameFldFocusGained
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void RegistrationPasswordFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationPasswordFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+        if(RegistrationPasswordFld.getText().equals("Password")){
+            RegistrationPasswordFld.setText(null);
+            RegistrationPasswordFld.requestFocus();
+            removePlaceholderStyle(RegistrationPasswordFld);
+        }
+    }//GEN-LAST:event_RegistrationPasswordFldFocusGained
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void RegistrationAddressFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationAddressFldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        if(RegistrationAddressFld.getText().equals("Address")){
+            RegistrationAddressFld.setText(null);
+            RegistrationAddressFld.requestFocus();
+            removePlaceholderStyle(RegistrationAddressFld);
+        }
+    }//GEN-LAST:event_RegistrationAddressFldFocusGained
 
+    private void RegistrationRepeatFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationRepeatFldFocusGained
+        // TODO add your handling code here:
+        if(RegistrationRepeatFld.getText().equals("Repeat Password")){
+            RegistrationRepeatFld.setText(null);
+            RegistrationRepeatFld.requestFocus();
+            removePlaceholderStyle(RegistrationRepeatFld);
+        }
+    }//GEN-LAST:event_RegistrationRepeatFldFocusGained
+
+    private void RegistrationPhoneFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationPhoneFldFocusGained
+        // TODO add your handling code here:
+        if(RegistrationPhoneFld.getText().equals("Phone number")){
+            RegistrationPhoneFld.setText(null);
+            RegistrationPhoneFld.requestFocus();
+            removePlaceholderStyle(RegistrationPhoneFld);
+        }
+    }//GEN-LAST:event_RegistrationPhoneFldFocusGained
+
+    private void RegistrationUsernameFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationUsernameFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationUsernameFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationUsernameFld);
+            RegistrationUsernameFld.setText("Username");
+        }
+    }//GEN-LAST:event_RegistrationUsernameFldFocusLost
+
+    private void RegistrationFirstnameFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationFirstnameFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationFirstnameFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationFirstnameFld);
+            RegistrationFirstnameFld.setText("Firstname");
+        }
+    }//GEN-LAST:event_RegistrationFirstnameFldFocusLost
+
+    private void RegistrationMailFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationMailFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationMailFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationMailFld);
+            RegistrationMailFld.setText("Mail");
+        }
+    }//GEN-LAST:event_RegistrationMailFldFocusLost
+
+    private void RegistrationLastnameFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationLastnameFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationLastnameFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationLastnameFld);
+            RegistrationLastnameFld.setText("Lastname");
+        }
+    }//GEN-LAST:event_RegistrationLastnameFldFocusLost
+
+    private void RegistrationPasswordFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationPasswordFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationPasswordFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationPasswordFld);
+            RegistrationPasswordFld.setText("Password");
+        }
+    }//GEN-LAST:event_RegistrationPasswordFldFocusLost
+
+    private void RegistrationAddressFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationAddressFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationAddressFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationAddressFld);
+            RegistrationAddressFld.setText("Address");
+        }
+    }//GEN-LAST:event_RegistrationAddressFldFocusLost
+
+    private void RegistrationRepeatFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationRepeatFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationRepeatFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationRepeatFld);
+            RegistrationRepeatFld.setText("Repeat Password");
+        }
+    }//GEN-LAST:event_RegistrationRepeatFldFocusLost
+
+    private void RegistrationPhoneFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationPhoneFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationPhoneFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationPhoneFld);
+            RegistrationPhoneFld.setText("Phone number");
+        }
+    }//GEN-LAST:event_RegistrationPhoneFldFocusLost
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+        this.requestFocusInWindow();
+    }//GEN-LAST:event_formWindowGainedFocus
+
+    private void RegistrationGenderBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationGenderBoxFocusGained
+        // TODO add your handling code here:
+        if(RegistrationGenderBox.getItemAt(0).equals("Gender")){
+            RegistrationGenderBox.setName(null);
+            RegistrationGenderBox.removeItemAt(0);
+            RegistrationGenderBox.requestFocus();
+            removePlaceholderStyle(RegistrationGenderBox);
+        }
+    }//GEN-LAST:event_RegistrationGenderBoxFocusGained
+
+    private void RegistrationGenderBoxFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationGenderBoxFocusLost
+        // TODO add your handling code here:
+        if(RegistrationGenderBox.getItemAt(0).length()==0){
+            addPlaceholderStyle(RegistrationGenderBox);
+            RegistrationGenderBox.setName("Gender");
+        }
+    }//GEN-LAST:event_RegistrationGenderBoxFocusLost
+
+    
     /**
      * @param args the command line arguments
      */
@@ -296,9 +545,22 @@ public class Registration extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField RegistrationAddressFld;
+    private javax.swing.JCheckBox RegistrationAgree;
+    private com.toedter.calendar.JDateChooser RegistrationBirthday;
+    private javax.swing.JTextField RegistrationFirstnameFld;
+    private javax.swing.JComboBox<String> RegistrationGenderBox;
+    private javax.swing.JTextField RegistrationLastnameFld;
+    private javax.swing.JTextField RegistrationMailFld;
+    private javax.swing.JTextField RegistrationPasswordFld;
+    private javax.swing.JTextField RegistrationPhoneFld;
+    private javax.swing.JTextField RegistrationRepeatFld;
+    private javax.swing.JTextField RegistrationUsernameFld;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -307,13 +569,5 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
