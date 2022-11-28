@@ -13,7 +13,7 @@ package MedicationOrderSystem;
 public class MedicationOrderSystem {
 
     public static void main(String[] args) {
-        System.out.println("Hello ProgEx!");
+        System.out.println("Hello ProgEx! & Tim");
         new Login().setVisible(true);
     }
 }
