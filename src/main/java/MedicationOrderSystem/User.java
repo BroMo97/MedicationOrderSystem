@@ -43,7 +43,7 @@ public class User extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Welcome");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-selfies-100.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\userlogo.png")); // NOI18N
         jLabel1.setText("Information");
 
         jLabel2.setText("Firstname & Lastname");
@@ -77,17 +77,17 @@ public class User extends javax.swing.JFrame {
                 .addContainerGap(388, Short.MAX_VALUE))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-user-menu-male-50.png")); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\user_menu_male.png")); // NOI18N
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-home-page-50.png")); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\homepage.png")); // NOI18N
         jMenuItem6.setText("Homepage");
         jMenu1.add(jMenuItem6);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-tools-50.png")); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\settings.png")); // NOI18N
         jMenuItem2.setText("Settings");
         jMenu1.add(jMenuItem2);
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-logout-rounded-50.png")); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\logout.png")); // NOI18N
         jMenuItem1.setText("Logout");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,17 +98,17 @@ public class User extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-maybe-50.png")); // NOI18N
+        jMenu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\order_menu.png")); // NOI18N
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-add-50.png")); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\add_order.png")); // NOI18N
         jMenuItem3.setText("Order medication");
         jMenu2.add(jMenuItem3);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-update-left-rotation-50.png")); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\update_order.png")); // NOI18N
         jMenuItem5.setText("Current orders");
         jMenu2.add(jMenuItem5);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\Downloads\\icons8-checklist-50.png")); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\order_list.png")); // NOI18N
         jMenuItem4.setText("Closed orders");
         jMenu2.add(jMenuItem4);
 

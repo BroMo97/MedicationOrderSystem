@@ -39,11 +39,6 @@
           <Color id="Standardcursor"/>
         </Property>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="null"/>
-        </Property>
-      </AccessibilityProperties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="65" y="35" width="-1" height="-1"/>
@@ -53,7 +48,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Oenal\Downloads\MOSLogo.png"/>
+          <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\MOSLogo.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -68,7 +63,7 @@
           <Font name="Arial" size="24" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Oenal\Downloads\icons8-password-50.png"/>
+          <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\password.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -98,7 +93,7 @@
           <Font name="Arial" size="24" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Oenal\Downloads\icons8-username-50.png"/>
+          <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\username.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -149,7 +144,7 @@
     <Component class="javax.swing.JButton" name="LoginLoginbtn">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Oenal\Downloads\icons8-login-50.png"/>
+          <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\login.png"/>
         </Property>
       </Properties>
       <Events>
