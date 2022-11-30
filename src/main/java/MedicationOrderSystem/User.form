@@ -7,14 +7,14 @@
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\user_menu_male.png"/>
+              <Image iconType="3" name="/user_menu_male.png"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\homepage.png"/>
+                  <Image iconType="3" name="/homepage.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Homepage"/>
               </Properties>
@@ -22,7 +22,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\settings.png"/>
+                  <Image iconType="3" name="/settings.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Settings"/>
               </Properties>
@@ -30,7 +30,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\logout.png"/>
+                  <Image iconType="3" name="/logout.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Logout"/>
               </Properties>
@@ -43,14 +43,14 @@
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\order_menu.png"/>
+              <Image iconType="3" name="/order_menu.png"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\add_order.png"/>
+                  <Image iconType="3" name="/add_order.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Order medication"/>
               </Properties>
@@ -58,7 +58,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\update_order.png"/>
+                  <Image iconType="3" name="/update_order.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Current orders"/>
               </Properties>
@@ -66,7 +66,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\order_list.png"/>
+                  <Image iconType="3" name="/order_list.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Closed orders"/>
               </Properties>
@@ -149,7 +149,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Oenal\OneDrive - HBK\Documents\ProgEx\MedicationOrderSystem-master\src\main\java\MedicationOrderSystem\icons\userlogo.png"/>
+              <Image iconType="3" name="/userlogo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Information"/>
           </Properties>

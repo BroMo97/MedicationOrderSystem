@@ -105,7 +105,7 @@ public class Registration extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\MOSLogo.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
 
         jLabel1.setText("Username");
 

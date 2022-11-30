@@ -73,11 +73,11 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 35, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\MOSLogo.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 95, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\password.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/password.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
 
         LoginUsernameFld.setText("Username");
@@ -97,7 +97,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(LoginUsernameFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 219, 37));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\username.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/username.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
         LoginPasswordFld.setText("Password");
@@ -128,7 +128,7 @@ public class Login extends javax.swing.JFrame {
         LoginPasswordResetBtn.setText("Password reset");
         getContentPane().add(LoginPasswordResetBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, -1, -1));
 
-        LoginLoginbtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oenal\\OneDrive - HBK\\Documents\\ProgEx\\MedicationOrderSystem-master\\src\\main\\java\\MedicationOrderSystem\\icons\\login.png")); // NOI18N
+        LoginLoginbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
         LoginLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginLoginbtnActionPerformed(evt);
