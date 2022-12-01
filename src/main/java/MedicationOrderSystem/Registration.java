@@ -7,6 +7,8 @@ package MedicationOrderSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -25,7 +27,9 @@ public class Registration extends javax.swing.JFrame {
         addPlaceholderStyle(RegistrationMailFld);
         addPlaceholderStyle(RegistrationLastnameFld);
         addPlaceholderStyle(RegistrationPasswordFld);
-        addPlaceholderStyle(RegistrationAddressFld);
+        addPlaceholderStyle(RegistrationStreetFld);
+        addPlaceholderStyle(RegistrationZIPFld);
+        addPlaceholderStyle(RegistrationCityFld);
         addPlaceholderStyle(RegistrationRepeatFld);
         addPlaceholderStyle(RegistrationPhoneFld);
         addPlaceholderStyle(RegistrationGenderBox);
@@ -85,15 +89,19 @@ public class Registration extends javax.swing.JFrame {
         RegistrationLastnameFld = new javax.swing.JTextField();
         RegistrationUsernameFld = new javax.swing.JTextField();
         RegistrationPasswordFld = new javax.swing.JTextField();
-        RegistrationAddressFld = new javax.swing.JTextField();
+        RegistrationStreetFld = new javax.swing.JTextField();
         RegistrationRepeatFld = new javax.swing.JTextField();
         RegistrationBirthday = new com.toedter.calendar.JDateChooser();
         RegistrationAgree = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        registerBtn = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         RegistrationGenderBox = new javax.swing.JComboBox<>();
         RegistrationPhoneFld = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        RegistrationZIPFld = new javax.swing.JTextField();
+        RegistrationCityFld = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registration");
@@ -117,7 +125,7 @@ public class Registration extends javax.swing.JFrame {
 
         jLabel6.setText("Password");
 
-        jLabel7.setText("Address (street, number, ZIP)");
+        jLabel7.setText("Street");
 
         jLabel8.setText("Repeat Password");
 
@@ -176,18 +184,18 @@ public class Registration extends javax.swing.JFrame {
             }
         });
 
-        RegistrationAddressFld.setText("Address");
-        RegistrationAddressFld.addFocusListener(new java.awt.event.FocusAdapter() {
+        RegistrationStreetFld.setText("Street");
+        RegistrationStreetFld.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                RegistrationAddressFldFocusGained(evt);
+                RegistrationStreetFldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                RegistrationAddressFldFocusLost(evt);
+                RegistrationStreetFldFocusLost(evt);
             }
         });
-        RegistrationAddressFld.addActionListener(new java.awt.event.ActionListener() {
+        RegistrationStreetFld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrationAddressFldActionPerformed(evt);
+                RegistrationStreetFldActionPerformed(evt);
             }
         });
 
@@ -204,7 +212,12 @@ public class Registration extends javax.swing.JFrame {
         RegistrationAgree.setText("Agree to our policy");
         RegistrationAgree.setToolTipText("");
 
-        jButton1.setText("Register");
+        registerBtn.setText("Register");
+        registerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerBtnActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Gender");
 
@@ -235,6 +248,40 @@ public class Registration extends javax.swing.JFrame {
 
         jLabel11.setText("Phone");
 
+        jLabel12.setText("ZIP");
+
+        jLabel13.setText("City");
+
+        RegistrationZIPFld.setText("ZIP");
+        RegistrationZIPFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationZIPFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationZIPFldFocusLost(evt);
+            }
+        });
+        RegistrationZIPFld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrationZIPFldActionPerformed(evt);
+            }
+        });
+
+        RegistrationCityFld.setText("City");
+        RegistrationCityFld.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RegistrationCityFldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RegistrationCityFldFocusLost(evt);
+            }
+        });
+        RegistrationCityFld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrationCityFldActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -258,8 +305,10 @@ public class Registration extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(RegistrationPasswordFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
-                    .addComponent(RegistrationGenderBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                    .addComponent(RegistrationGenderBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12)
+                    .addComponent(RegistrationZIPFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel5)
@@ -267,14 +316,16 @@ public class Registration extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(RegistrationFirstnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegistrationLastnameFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegistrationAddressFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationStreetFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegistrationBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegistrationPhoneFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel13)
+                    .addComponent(RegistrationCityFld, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(registerBtn)
                 .addGap(190, 190, 190))
         );
         layout.setVerticalGroup(
@@ -308,31 +359,37 @@ public class Registration extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(RegistrationPasswordFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RegistrationAddressFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(RegistrationStreetFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(RegistrationRepeatFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RegistrationBirthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(RegistrationZIPFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistrationCityFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(RegistrationAgree)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RegistrationGenderBox)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(RegistrationPhoneFld, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                    .addComponent(RegistrationRepeatFld, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationBirthday, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegistrationGenderBox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationPhoneFld, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(registerBtn)
                 .addGap(24, 24, 24))
         );
 
@@ -340,9 +397,9 @@ public class Registration extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RegistrationAddressFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationAddressFldActionPerformed
+    private void RegistrationStreetFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationStreetFldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegistrationAddressFldActionPerformed
+    }//GEN-LAST:event_RegistrationStreetFldActionPerformed
 
     private void RegistrationGenderBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationGenderBoxActionPerformed
         // TODO add your handling code here:
@@ -394,14 +451,14 @@ public class Registration extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RegistrationPasswordFldFocusGained
 
-    private void RegistrationAddressFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationAddressFldFocusGained
+    private void RegistrationStreetFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationStreetFldFocusGained
         // TODO add your handling code here:
-        if(RegistrationAddressFld.getText().equals("Address")){
-            RegistrationAddressFld.setText(null);
-            RegistrationAddressFld.requestFocus();
-            removePlaceholderStyle(RegistrationAddressFld);
+        if(RegistrationStreetFld.getText().equals("Street")){
+            RegistrationStreetFld.setText(null);
+            RegistrationStreetFld.requestFocus();
+            removePlaceholderStyle(RegistrationStreetFld);
         }
-    }//GEN-LAST:event_RegistrationAddressFldFocusGained
+    }//GEN-LAST:event_RegistrationStreetFldFocusGained
 
     private void RegistrationRepeatFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationRepeatFldFocusGained
         // TODO add your handling code here:
@@ -461,13 +518,13 @@ public class Registration extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RegistrationPasswordFldFocusLost
 
-    private void RegistrationAddressFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationAddressFldFocusLost
+    private void RegistrationStreetFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationStreetFldFocusLost
         // TODO add your handling code here:
-        if(RegistrationAddressFld.getText().length()==0){
-            addPlaceholderStyle(RegistrationAddressFld);
-            RegistrationAddressFld.setText("Address");
+        if(RegistrationStreetFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationStreetFld);
+            RegistrationStreetFld.setText("Street");
         }
-    }//GEN-LAST:event_RegistrationAddressFldFocusLost
+    }//GEN-LAST:event_RegistrationStreetFldFocusLost
 
     private void RegistrationRepeatFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationRepeatFldFocusLost
         // TODO add your handling code here:
@@ -508,6 +565,76 @@ public class Registration extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RegistrationGenderBoxFocusLost
 
+    private void RegistrationZIPFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationZIPFldFocusGained
+        // TODO add your handling code here:
+        if(RegistrationZIPFld.getText().equals("ZIP")){
+            RegistrationZIPFld.setText(null);
+            RegistrationZIPFld.requestFocus();
+            removePlaceholderStyle(RegistrationZIPFld);
+        }
+    }//GEN-LAST:event_RegistrationZIPFldFocusGained
+
+    private void RegistrationZIPFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationZIPFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationZIPFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationZIPFld);
+            RegistrationZIPFld.setText("ZIP");
+        }
+    }//GEN-LAST:event_RegistrationZIPFldFocusLost
+
+    private void RegistrationZIPFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationZIPFldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistrationZIPFldActionPerformed
+
+    private void RegistrationCityFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationCityFldFocusGained
+        // TODO add your handling code here:
+        if(RegistrationCityFld.getText().equals("City")){
+            RegistrationCityFld.setText(null);
+            RegistrationCityFld.requestFocus();
+            removePlaceholderStyle(RegistrationCityFld);
+        }
+    }//GEN-LAST:event_RegistrationCityFldFocusGained
+
+    private void RegistrationCityFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RegistrationCityFldFocusLost
+        // TODO add your handling code here:
+        if(RegistrationCityFld.getText().length()==0){
+            addPlaceholderStyle(RegistrationCityFld);
+            RegistrationCityFld.setText("City");
+        }
+    }//GEN-LAST:event_RegistrationCityFldFocusLost
+
+    private void RegistrationCityFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationCityFldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistrationCityFldActionPerformed
+
+    private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
+        // TODO add your handling code here:
+        boolean insertSuccess;
+        DBConnection con = new DBConnection();
+        
+        Customer customer = new Customer();
+        customer.setUsername(RegistrationUsernameFld.getText());
+        customer.setPassword(RegistrationPasswordFld.getText());
+        customer.setFirstname(RegistrationFirstnameFld.getText());
+        customer.setLastname(RegistrationLastnameFld.getText());
+        customer.setMail(RegistrationMailFld.getText());
+        customer.setBirthday(RegistrationBirthday.getDateFormatString());
+        customer.setStreet(RegistrationStreetFld.getText());
+        customer.setZip(RegistrationZIPFld.getText());
+        customer.setCity(RegistrationCityFld.getText());
+        customer.setGender(RegistrationGenderBox.getSelectedItem().toString());
+        customer.setPhone(RegistrationPhoneFld.getText());
+        
+        insertSuccess = customer.register();
+        
+        if(insertSuccess){
+            dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(new Registration(),"Error");
+        }
+    }//GEN-LAST:event_registerBtnActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -545,9 +672,9 @@ public class Registration extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField RegistrationAddressFld;
     private javax.swing.JCheckBox RegistrationAgree;
     private com.toedter.calendar.JDateChooser RegistrationBirthday;
+    private javax.swing.JTextField RegistrationCityFld;
     private javax.swing.JTextField RegistrationFirstnameFld;
     private javax.swing.JComboBox<String> RegistrationGenderBox;
     private javax.swing.JTextField RegistrationLastnameFld;
@@ -555,12 +682,15 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JTextField RegistrationPasswordFld;
     private javax.swing.JTextField RegistrationPhoneFld;
     private javax.swing.JTextField RegistrationRepeatFld;
+    private javax.swing.JTextField RegistrationStreetFld;
     private javax.swing.JTextField RegistrationUsernameFld;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField RegistrationZIPFld;
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -569,5 +699,6 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton registerBtn;
     // End of variables declaration//GEN-END:variables
 }

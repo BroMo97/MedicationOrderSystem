@@ -5,6 +5,8 @@
 
 package MedicationOrderSystem;
 
+import java.sql.Connection;
+
 
 /**
  *
@@ -14,6 +16,8 @@ public class MedicationOrderSystem {
 
     public static void main(String[] args) {
         System.out.println("Hello ProgEx! & Tim");
+        DBConnection con = new DBConnection();
+        System.out.println(con.getCon());
         new Login().setVisible(true);
     }
 }
