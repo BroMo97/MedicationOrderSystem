@@ -18,7 +18,7 @@ public class DBConnection {
     DBConnection(){
         String url = "jdbc:mysql://localhost:3306/apotheke_progex";
         String user = "root";
-        String password = "OneMio2022!";
+        String password = "Timz0704!";
         
         try{
             con = DriverManager.getConnection(url, user, password);
