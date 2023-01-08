@@ -1,4 +1,5 @@
 package MedicationOrderSystem.Classes;
+import MedicationOrderSystem.Handler.*;
 /**
  * Class which monitors and maintains the data of users of the project
  * @author patricia

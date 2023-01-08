@@ -1,4 +1,5 @@
 package MedicationOrderSystem.Handler;
+import MedicationOrderSystem.Classes.*;
 
     import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

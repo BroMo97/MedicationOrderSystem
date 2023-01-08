@@ -1,6 +1,11 @@
+
+
+
+
 package MedicationOrderSystem.Handler;
-import Classes.Registration;
-import Classes.User;
+import MedicationOrderSystem.Classes.*;
+
+
 
 /**
  * Handler to handle {@link User} when they're registered
