@@ -11,7 +11,7 @@ import java.sql.SQLException;
  *
  * @author OENAL
  */
-public class Customer {
+/*public class Customer {
     private String username;
     private String password;
     private String firstname;
@@ -140,7 +140,7 @@ public class Customer {
         this.deleted = deleted;
     }
     
-    public boolean register(){
+/*     public boolean register(){
         DBConnection con = new DBConnection();
         
         String query = "INSERT INTO customer (username, password, firstname, lastname, mail, birthday, street, " +
@@ -171,5 +171,5 @@ public class Customer {
     
     public boolean login(){
         return true;
-    }
-}
+    } 
+}*/
