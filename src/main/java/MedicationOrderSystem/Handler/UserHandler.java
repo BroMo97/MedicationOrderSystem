@@ -1,11 +1,5 @@
-
-
-
-
 package MedicationOrderSystem.Handler;
 import MedicationOrderSystem.Classes.*;
-
-
 
 /**
  * Handler to handle {@link User} when they're registered
@@ -53,8 +47,8 @@ public class UserHandler {
             return !(!CheckInput(toBeCreated) ||!confirmationCheck(toBeCreated));
         }
         
-        public Classes.User createNewUser(Registration toBeCreated,boolean EmailAvailable, boolean UsernameAvailable){
-            Classes.User createdUser = null;
+        public User createNewUser(Registration toBeCreated,boolean EmailAvailable, boolean UsernameAvailable){
+            User createdUser = null;
             
             if(!EmailAvailable || !UsernameAvailable)
                 return createdUser;
@@ -68,4 +62,6 @@ public class UserHandler {
             
             return createdUser;
         }
+
+        
 }

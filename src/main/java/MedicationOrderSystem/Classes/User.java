@@ -15,10 +15,10 @@ public class User {
     private String email = null;
     private boolean role = false;
 // ---- hier bitte getter setter einfügen und in Constructor hinzufügen ----     
-//    private String gender = null; 
-//    private String address = null; 
-//    private LocalDateTime birthday = null;
-//
+    private String gender = null; 
+    private String address = null; 
+    private LocalDateTime birthday = null;
+    private String phone = null;
 
     //Constructor
     public User(String name, String surname, String username, String email, boolean role) {
