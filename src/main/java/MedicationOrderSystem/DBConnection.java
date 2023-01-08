@@ -5,14 +5,16 @@ package MedicationOrderSystem;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-import java.sql.*;
+ /*import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
 /**
  *
  * @author OENAL
  */
-public class DBConnection {
+/*public class DBConnection {
     private Connection con = null;
     
     DBConnection(){
@@ -30,4 +32,4 @@ public class DBConnection {
     public Connection getCon(){
         return con;
     }
-}
+}*/

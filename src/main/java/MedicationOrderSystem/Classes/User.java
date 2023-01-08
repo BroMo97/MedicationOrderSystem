@@ -1,4 +1,6 @@
 package MedicationOrderSystem.Classes;
+import java.time.LocalDateTime;
+
 import MedicationOrderSystem.Handler.*;
 /**
  * Class which monitors and maintains the data of users of the project
@@ -7,16 +9,21 @@ import MedicationOrderSystem.Handler.*;
 
 
 public class User {
-    private String firstname = null;
-    private String lastname = null;
+    private String name = null;
+    private String surname = null;
     private String username = null;
     private String email = null;
     private boolean role = false;
+// ---- hier bitte getter setter einfügen und in Constructor hinzufügen ----     
+//    private String gender = null; 
+//    private String address = null; 
+//    private LocalDateTime birthday = null;
+//
 
     //Constructor
-    public User(String firstname, String lastname, String username, String email, boolean role) {
-        this.setFirstname(firstname);
-        this.setLastname(lastname);
+    public User(String name, String surname, String username, String email, boolean role) {
+        this.setFirstname(name);
+        this.setLastname(surname);
         this.setUsername(username);
         this.setEmail(email);
         this.setRole(role);
@@ -24,11 +31,11 @@ public class User {
     }
 
     public String getFirstname() {
-        return firstname;
+        return name;
     }
 
     public String getLastname() {
-        return lastname;
+        return surname;
     }
 
     public String getUsername() {
@@ -41,11 +48,11 @@ public class User {
     //public String getPassword() {return password;}
 
     public void setFirstname(String _firstname) {
-        firstname = _firstname;
+        name = _firstname;
     }
 
     public void setLastname(String _lastname) {
-        lastname = _lastname;
+        surname = _lastname;
     }
 
     public void setUsername(String _username) {
