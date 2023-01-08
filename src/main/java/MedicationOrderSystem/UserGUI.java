@@ -15,6 +15,7 @@ public class UserGUI extends javax.swing.JFrame {
      */
     public UserGUI() {
         initComponents();
+
     }
 
     /**
@@ -26,17 +27,17 @@ public class UserGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TopPanel = new javax.swing.JPanel();
+        topPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         leftSide = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        homePageBtn = new javax.swing.JButton();
-        settingsBtn = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        ls_btn_LogOut = new javax.swing.JButton();
+        ls_btn_Home = new javax.swing.JButton();
+        ls_btn_Settings = new javax.swing.JButton();
+        ls_btn_NewOrderPrescription = new javax.swing.JButton();
+        ls_btn_NewOrderOTC = new javax.swing.JButton();
+        ls_btn_1 = new javax.swing.JButton();
+        ls_btn_2 = new javax.swing.JButton();
         rightSide = new javax.swing.JPanel();
         homePage = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,43 +73,83 @@ public class UserGUI extends javax.swing.JFrame {
         cancelBtn = new javax.swing.JButton();
         resetBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
-        newOrder = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        firstNameTxt1 = new javax.swing.JTextField();
-        saveBtn1 = new javax.swing.JButton();
-        jLabel19 = new javax.swing.JLabel();
-        firstNameTxt2 = new javax.swing.JTextField();
+        sp_btn_DeleteAccount = new javax.swing.JButton();
+        newOrderPrescription = new javax.swing.JPanel();
+        nor_lbl_NewOrder = new javax.swing.JLabel();
+        nor_lbl_HI = new javax.swing.JLabel();
+        nor_tf_HI = new javax.swing.JTextField();
+        nor_btn_OrderNow = new javax.swing.JButton();
+        nor_lbl_INum = new javax.swing.JLabel();
+        nor_tf_INum = new javax.swing.JTextField();
+        nor_tf_BusLocNum = new javax.swing.JTextField();
+        nor_lbl_BusLocNum = new javax.swing.JLabel();
+        nor_lbl_Med2 = new javax.swing.JLabel();
+        nor_tf_Med2 = new javax.swing.JTextField();
+        nor_tf_DocNum = new javax.swing.JTextField();
+        nor_lbl_DocNum = new javax.swing.JLabel();
+        nor_tf_Med1 = new javax.swing.JTextField();
+        nor_lbl_Med1 = new javax.swing.JLabel();
+        nor_tf_HINum = new javax.swing.JTextField();
+        nor_lbl_HINum = new javax.swing.JLabel();
+        nor_btn_AddDelMed = new javax.swing.JButton();
+        nor_tf_Med3 = new javax.swing.JTextField();
+        nor_lbl_Med3 = new javax.swing.JLabel();
+        nor_tf_Med4 = new javax.swing.JTextField();
+        nor_lbl_Med4 = new javax.swing.JLabel();
+        nor_tf_Med5 = new javax.swing.JTextField();
+        nor_lbl_Med5 = new javax.swing.JLabel();
+        nor_jdc_PresDate = new com.toedter.calendar.JDateChooser();
+        nor_lbl_PresDate = new javax.swing.JLabel();
+        newOrderOTC = new javax.swing.JPanel();
+        notc_lbl_NewOrder = new javax.swing.JLabel();
+        notc_btn_OrderNow = new javax.swing.JButton();
+        notc_lbl_Med1 = new javax.swing.JLabel();
+        notc_tf_Med1 = new javax.swing.JTextField();
+        notc_lbl_Med2 = new javax.swing.JLabel();
+        notc_tf_Med2 = new javax.swing.JTextField();
+        notc_lbl_Notes = new javax.swing.JLabel();
+        notc_tf_Notes = new javax.swing.JTextField();
+        notc_lbl_Med3 = new javax.swing.JLabel();
+        notc_tf_Med3 = new javax.swing.JTextField();
+        clickedOrderNow = new javax.swing.JPanel();
+        con_lbl_Text = new javax.swing.JLabel();
+        con_lbl_CON = new javax.swing.JLabel();
+        con_lbl_Done = new javax.swing.JButton();
+        deleteAccountClicked = new javax.swing.JPanel();
+        dac_lbl_DelAcc = new javax.swing.JLabel();
+        dac_lbl_Text = new javax.swing.JLabel();
+        dac_lbl_Done = new javax.swing.JButton();
+        dac_lbl_Back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        TopPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        topPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogoKlein.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("MOS.DE");
 
-        javax.swing.GroupLayout TopPanelLayout = new javax.swing.GroupLayout(TopPanel);
-        TopPanel.setLayout(TopPanelLayout);
-        TopPanelLayout.setHorizontalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout topPanelLayout = new javax.swing.GroupLayout(topPanel);
+        topPanel.setLayout(topPanelLayout);
+        topPanelLayout.setHorizontalGroup(
+            topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(topPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        TopPanelLayout.setVerticalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopPanelLayout.createSequentialGroup()
-                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        topPanelLayout.setVerticalGroup(
+            topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topPanelLayout.createSequentialGroup()
+                .addGroup(topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(TopPanelLayout.createSequentialGroup()
+                    .addGroup(topPanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)))
                 .addGap(18, 18, 18))
@@ -116,34 +157,45 @@ public class UserGUI extends javax.swing.JFrame {
 
         leftSide.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setText("LogOut");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ls_btn_LogOut.setText("LogOut");
+        ls_btn_LogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ls_btn_LogOutActionPerformed(evt);
             }
         });
 
-        homePageBtn.setText("Home");
-        homePageBtn.addActionListener(new java.awt.event.ActionListener() {
+        ls_btn_Home.setText("Home");
+        ls_btn_Home.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homePageBtnActionPerformed(evt);
+                ls_btn_HomeActionPerformed(evt);
             }
         });
 
-        settingsBtn.setText("Settings");
-        settingsBtn.addActionListener(new java.awt.event.ActionListener() {
+        ls_btn_Settings.setText("Settings");
+        ls_btn_Settings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                settingsBtnActionPerformed(evt);
+                ls_btn_SettingsActionPerformed(evt);
             }
         });
 
-        jButton4.setText("LogOut");
+        ls_btn_NewOrderPrescription.setText("<html>\n<p align = \"center\">New Order<br>Prescription</p>\n<html/>");
+        ls_btn_NewOrderPrescription.setToolTipText("");
+        ls_btn_NewOrderPrescription.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ls_btn_NewOrderPrescriptionActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("LogOut");
+        ls_btn_NewOrderOTC.setText("<html>\n<p align = \"center\">New Order<br>OTC</p>\n\n\n<html/>");
+        ls_btn_NewOrderOTC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ls_btn_NewOrderOTCActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("LogOut");
+        ls_btn_1.setText("1");
 
-        jButton7.setText("LogOut");
+        ls_btn_2.setText("2");
 
         javax.swing.GroupLayout leftSideLayout = new javax.swing.GroupLayout(leftSide);
         leftSide.setLayout(leftSideLayout);
@@ -152,32 +204,32 @@ public class UserGUI extends javax.swing.JFrame {
             .addGroup(leftSideLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(leftSideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(homePageBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(settingsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
+                    .addComponent(ls_btn_LogOut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ls_btn_Home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ls_btn_Settings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ls_btn_NewOrderPrescription, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ls_btn_NewOrderOTC, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ls_btn_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ls_btn_2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         leftSideLayout.setVerticalGroup(
             leftSideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leftSideLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(homePageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_Home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(settingsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_Settings, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_NewOrderPrescription, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_NewOrderOTC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ls_btn_LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -220,7 +272,7 @@ public class UserGUI extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE))
                 .addContainerGap())
         );
         homePageLayout.setVerticalGroup(
@@ -286,6 +338,14 @@ public class UserGUI extends javax.swing.JFrame {
 
         saveBtn.setText("Save");
 
+        sp_btn_DeleteAccount.setForeground(new java.awt.Color(255, 0, 0));
+        sp_btn_DeleteAccount.setText("Delete Account");
+        sp_btn_DeleteAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sp_btn_DeleteAccountActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout settingsPageLayout = new javax.swing.GroupLayout(settingsPage);
         settingsPage.setLayout(settingsPageLayout);
         settingsPageLayout.setHorizontalGroup(
@@ -317,7 +377,7 @@ public class UserGUI extends javax.swing.JFrame {
                                             .addComponent(jLabel9)
                                             .addComponent(genderBx, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(jLabel11))
-                                .addGap(0, 70, Short.MAX_VALUE)))
+                                .addGap(0, 89, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(settingsPageLayout.createSequentialGroup()
                         .addGroup(settingsPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -349,6 +409,10 @@ public class UserGUI extends javax.swing.JFrame {
                                 .addComponent(saveBtn))
                             .addComponent(resetBtn))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, settingsPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sp_btn_DeleteAccount)
+                .addContainerGap())
         );
         settingsPageLayout.setVerticalGroup(
             settingsPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,85 +462,445 @@ public class UserGUI extends javax.swing.JFrame {
                     .addComponent(repeatPaswrdTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(resetBtn)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(sp_btn_DeleteAccount)
+                .addContainerGap())
         );
 
         rightSide.add(settingsPage, "card3");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel17.setText("New Order:");
+        nor_lbl_NewOrder.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        nor_lbl_NewOrder.setText("New Order (With Prescription):");
 
-        jLabel18.setText("Health Insurance:");
+        nor_lbl_HI.setText("Health Insurance:");
 
-        firstNameTxt1.addActionListener(new java.awt.event.ActionListener() {
+        nor_tf_HI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstNameTxt1ActionPerformed(evt);
+                nor_tf_HIActionPerformed(evt);
             }
         });
 
-        saveBtn1.setText("Order Now");
-        saveBtn1.addActionListener(new java.awt.event.ActionListener() {
+        nor_btn_OrderNow.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        nor_btn_OrderNow.setText("Order Now");
+        nor_btn_OrderNow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveBtn1ActionPerformed(evt);
+                nor_btn_OrderNowActionPerformed(evt);
             }
         });
 
-        jLabel19.setText("Health Insurance:");
+        nor_lbl_INum.setText("Insurance Number:");
 
-        firstNameTxt2.addActionListener(new java.awt.event.ActionListener() {
+        nor_tf_INum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstNameTxt2ActionPerformed(evt);
+                nor_tf_INumActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout newOrderLayout = new javax.swing.GroupLayout(newOrder);
-        newOrder.setLayout(newOrderLayout);
-        newOrderLayout.setHorizontalGroup(
-            newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(newOrderLayout.createSequentialGroup()
+        nor_tf_BusLocNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_BusLocNumActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_BusLocNum.setText("Business Location Number:");
+
+        nor_lbl_Med2.setText("Medication 2:");
+
+        nor_tf_Med2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_Med2ActionPerformed(evt);
+            }
+        });
+
+        nor_tf_DocNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_DocNumActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_DocNum.setText("Doctor Number:");
+
+        nor_tf_Med1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_Med1ActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_Med1.setText("Medication:");
+
+        nor_tf_HINum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_HINumActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_HINum.setText("Health Insurance Number:");
+
+        nor_btn_AddDelMed.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        nor_btn_AddDelMed.setText("+");
+        nor_btn_AddDelMed.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nor_btn_AddDelMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_btn_AddDelMedActionPerformed(evt);
+            }
+        });
+
+        nor_tf_Med3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_Med3ActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_Med3.setText("Medication 3:");
+
+        nor_tf_Med4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_Med4ActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_Med4.setText("Medication 4:");
+
+        nor_tf_Med5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nor_tf_Med5ActionPerformed(evt);
+            }
+        });
+
+        nor_lbl_Med5.setText("Medication 5:");
+
+        nor_lbl_PresDate.setText("Prescription Date: ");
+
+        javax.swing.GroupLayout newOrderPrescriptionLayout = new javax.swing.GroupLayout(newOrderPrescription);
+        newOrderPrescription.setLayout(newOrderPrescriptionLayout);
+        newOrderPrescriptionLayout.setHorizontalGroup(
+            newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(newOrderLayout.createSequentialGroup()
-                        .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
-                            .addGroup(newOrderLayout.createSequentialGroup()
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(newOrderLayout.createSequentialGroup()
-                        .addComponent(firstNameTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(newOrderLayout.createSequentialGroup()
-                .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(newOrderLayout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(saveBtn1))
-                    .addGroup(newOrderLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(firstNameTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nor_lbl_HI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nor_tf_HI)
+                                    .addComponent(nor_lbl_BusLocNum, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(nor_tf_BusLocNum, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(nor_lbl_PresDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nor_jdc_PresDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nor_lbl_Med2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                        .addComponent(nor_tf_Med2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(nor_btn_AddDelMed))
+                                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(nor_lbl_HINum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nor_tf_HINum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(nor_lbl_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nor_tf_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(nor_lbl_Med1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nor_tf_Med1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(nor_lbl_Med5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nor_tf_Med5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(nor_btn_OrderNow, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nor_lbl_INum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nor_tf_INum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nor_lbl_DocNum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nor_tf_DocNum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nor_lbl_Med4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nor_tf_Med4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(nor_lbl_NewOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
-        newOrderLayout.setVerticalGroup(
-            newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(newOrderLayout.createSequentialGroup()
+        newOrderPrescriptionLayout.setVerticalGroup(
+            newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nor_lbl_NewOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(firstNameTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                        .addComponent(nor_lbl_HI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nor_tf_HI, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(nor_lbl_INum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nor_tf_INum, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, newOrderPrescriptionLayout.createSequentialGroup()
+                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_HINum)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_HINum, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_Med3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_DocNum)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_DocNum, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_Med4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_Med4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel19)
+                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(newOrderPrescriptionLayout.createSequentialGroup()
+                        .addComponent(nor_lbl_BusLocNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nor_tf_BusLocNum, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newOrderPrescriptionLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_Med1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_Med1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newOrderPrescriptionLayout.createSequentialGroup()
+                                .addComponent(nor_lbl_Med5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nor_tf_Med5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nor_lbl_Med2)
+                    .addComponent(nor_lbl_PresDate))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(firstNameTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
-                .addComponent(saveBtn1)
+                .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(newOrderPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(nor_btn_AddDelMed, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nor_tf_Med2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                    .addComponent(nor_jdc_PresDate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addComponent(nor_btn_OrderNow, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        rightSide.add(newOrder, "card4");
+        rightSide.add(newOrderPrescription, "card4");
+
+        notc_lbl_NewOrder.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        notc_lbl_NewOrder.setText("New Order Over The Counter (No Prescription):");
+
+        notc_btn_OrderNow.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        notc_btn_OrderNow.setText("Order Now");
+        notc_btn_OrderNow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notc_btn_OrderNowActionPerformed(evt);
+            }
+        });
+
+        notc_lbl_Med1.setText("Medication:");
+
+        notc_tf_Med1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notc_tf_Med1ActionPerformed(evt);
+            }
+        });
+
+        notc_lbl_Med2.setText("Medication 2:");
+
+        notc_tf_Med2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notc_tf_Med2ActionPerformed(evt);
+            }
+        });
+
+        notc_lbl_Notes.setText("Notes:");
+
+        notc_tf_Notes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notc_tf_NotesActionPerformed(evt);
+            }
+        });
+
+        notc_lbl_Med3.setText("Medication 3:");
+
+        notc_tf_Med3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notc_tf_Med3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout newOrderOTCLayout = new javax.swing.GroupLayout(newOrderOTC);
+        newOrderOTC.setLayout(newOrderOTCLayout);
+        newOrderOTCLayout.setHorizontalGroup(
+            newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newOrderOTCLayout.createSequentialGroup()
+                .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(newOrderOTCLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(notc_lbl_NewOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE))
+                    .addGroup(newOrderOTCLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(notc_tf_Med1)
+                                .addComponent(notc_lbl_Med1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(notc_lbl_Med2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(notc_tf_Med2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(notc_lbl_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(notc_tf_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(notc_lbl_Notes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(notc_tf_Notes))))
+                .addContainerGap())
+            .addGroup(newOrderOTCLayout.createSequentialGroup()
+                .addGap(217, 217, 217)
+                .addComponent(notc_btn_OrderNow, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        newOrderOTCLayout.setVerticalGroup(
+            newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newOrderOTCLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(notc_lbl_NewOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(notc_lbl_Med1)
+                    .addComponent(notc_lbl_Notes))
+                .addGap(18, 18, 18)
+                .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(newOrderOTCLayout.createSequentialGroup()
+                        .addComponent(notc_tf_Med1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(notc_lbl_Med2)
+                        .addGap(18, 18, 18)
+                        .addComponent(notc_tf_Med2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(notc_lbl_Med3)
+                        .addGap(18, 18, 18)
+                        .addComponent(notc_tf_Med3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(notc_tf_Notes))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(notc_btn_OrderNow, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        rightSide.add(newOrderOTC, "card5");
+
+        con_lbl_Text.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        con_lbl_Text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        con_lbl_Text.setText("<html> <p align = \"center\">You can look up your <b>Orders</b> by going to the <b>Home</b> tab and selecting the <b>Orders</b>.</p> <p align = \"center\"; style=\"color:#33FFFF\">Please ensure you bring your <b>prescription</b> and valid form of <b>identification</b> when you come to pick up your order.</p> <p align = \"center\">Thank <b>YOU</b> for choosing us.</p> </html>");
+
+        con_lbl_CON.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        con_lbl_CON.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        con_lbl_CON.setText("Your order has been successfully placed!");
+
+        con_lbl_Done.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        con_lbl_Done.setText("Done");
+        con_lbl_Done.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                con_lbl_DoneActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout clickedOrderNowLayout = new javax.swing.GroupLayout(clickedOrderNow);
+        clickedOrderNow.setLayout(clickedOrderNowLayout);
+        clickedOrderNowLayout.setHorizontalGroup(
+            clickedOrderNowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clickedOrderNowLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(clickedOrderNowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(con_lbl_CON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
+                    .addComponent(con_lbl_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(clickedOrderNowLayout.createSequentialGroup()
+                .addGap(236, 236, 236)
+                .addComponent(con_lbl_Done, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        clickedOrderNowLayout.setVerticalGroup(
+            clickedOrderNowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clickedOrderNowLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(con_lbl_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(con_lbl_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(con_lbl_Done, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        rightSide.add(clickedOrderNow, "card6");
+
+        dac_lbl_DelAcc.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        dac_lbl_DelAcc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dac_lbl_DelAcc.setText("Do you want to delete your account?");
+
+        dac_lbl_Text.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        dac_lbl_Text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dac_lbl_Text.setText("<html>\n<p align = \"center\">Do you really want to leave us?.</p>\n<p align = \"center\"; style = color:red\">You will not be able to order medications or use this platform without an account.</p>\n<p align = \"center\"; style =\"color:red\">You can recover your account later if you want to come back to us.</p> \n<p align = \"center\">We wish you the best for your future!</p>\n</html>");
+
+        dac_lbl_Done.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        dac_lbl_Done.setForeground(new java.awt.Color(255, 51, 51));
+        dac_lbl_Done.setText("Delete Account");
+        dac_lbl_Done.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dac_lbl_DoneActionPerformed(evt);
+            }
+        });
+
+        dac_lbl_Back.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        dac_lbl_Back.setText("Go Back");
+        dac_lbl_Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dac_lbl_BackActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout deleteAccountClickedLayout = new javax.swing.GroupLayout(deleteAccountClicked);
+        deleteAccountClicked.setLayout(deleteAccountClickedLayout);
+        deleteAccountClickedLayout.setHorizontalGroup(
+            deleteAccountClickedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(deleteAccountClickedLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(deleteAccountClickedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dac_lbl_DelAcc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
+                    .addComponent(dac_lbl_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(deleteAccountClickedLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addGroup(deleteAccountClickedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dac_lbl_Back, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dac_lbl_Done, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        deleteAccountClickedLayout.setVerticalGroup(
+            deleteAccountClickedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deleteAccountClickedLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(dac_lbl_DelAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(dac_lbl_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dac_lbl_Back, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addComponent(dac_lbl_Done, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        rightSide.add(deleteAccountClicked, "card7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -485,7 +909,7 @@ public class UserGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(topPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(leftSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -496,7 +920,7 @@ public class UserGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rightSide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -508,27 +932,27 @@ public class UserGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void homePageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homePageBtnActionPerformed
+    private void ls_btn_HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_HomeActionPerformed
         // TODO add your handling code here:
         rightSide.removeAll();
         rightSide.add(homePage);
         rightSide.repaint();
         rightSide.revalidate();
-    }//GEN-LAST:event_homePageBtnActionPerformed
+    }//GEN-LAST:event_ls_btn_HomeActionPerformed
 
-    private void settingsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBtnActionPerformed
+    private void ls_btn_SettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_SettingsActionPerformed
         // TODO add your handling code here:
         rightSide.removeAll();
         rightSide.add(settingsPage);
         rightSide.repaint();
         rightSide.revalidate();
-    }//GEN-LAST:event_settingsBtnActionPerformed
+    }//GEN-LAST:event_ls_btn_SettingsActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ls_btn_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_LogOutActionPerformed
         // TODO add your handling code here:
         new Login().setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ls_btn_LogOutActionPerformed
 
     private void firstNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTxtActionPerformed
         // TODO add your handling code here:
@@ -538,17 +962,154 @@ public class UserGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_editBtnActionPerformed
 
-    private void firstNameTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTxt1ActionPerformed
+    private void nor_tf_HIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_HIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstNameTxt1ActionPerformed
+    }//GEN-LAST:event_nor_tf_HIActionPerformed
 
-    private void saveBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveBtn1ActionPerformed
+    private void nor_btn_OrderNowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_btn_OrderNowActionPerformed
+        rightSide.removeAll();
+        rightSide.add(clickedOrderNow);
+        rightSide.repaint();
+        rightSide.revalidate();
+    }//GEN-LAST:event_nor_btn_OrderNowActionPerformed
 
-    private void firstNameTxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTxt2ActionPerformed
+    private void nor_tf_INumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_INumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstNameTxt2ActionPerformed
+    }//GEN-LAST:event_nor_tf_INumActionPerformed
+
+    private void nor_tf_BusLocNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_BusLocNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_BusLocNumActionPerformed
+
+    private void nor_tf_Med2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_Med2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_Med2ActionPerformed
+
+    private void nor_tf_DocNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_DocNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_DocNumActionPerformed
+
+    private void nor_tf_Med1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_Med1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_Med1ActionPerformed
+
+    private void nor_tf_HINumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_HINumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_HINumActionPerformed
+
+    private void nor_btn_AddDelMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_btn_AddDelMedActionPerformed
+        if(nor_btn_AddDelMed.getText() == "+"){
+            
+            nor_lbl_Med3.setVisible(true);
+            nor_lbl_Med4.setVisible(true);
+            nor_lbl_Med5.setVisible(true);
+            
+            nor_tf_Med3.setVisible(true);
+            nor_tf_Med4.setVisible(true);
+            nor_tf_Med5.setVisible(true);
+
+            System.out.println("AddDel == +");
+            
+            nor_btn_AddDelMed.setText("-");
+        }
+        else if(nor_btn_AddDelMed.getText() == "-"){
+            
+            nor_lbl_Med3.setVisible(false);
+            nor_lbl_Med4.setVisible(false);
+            nor_lbl_Med5.setVisible(false);
+            
+            nor_tf_Med3.setVisible(false);
+            nor_tf_Med4.setVisible(false);
+            nor_tf_Med5.setVisible(false);
+
+            System.out.println("AddDel == -");
+            
+            nor_btn_AddDelMed.setText("+");
+        }
+    }//GEN-LAST:event_nor_btn_AddDelMedActionPerformed
+
+    private void nor_tf_Med3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_Med3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_Med3ActionPerformed
+
+    private void nor_tf_Med4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_Med4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_Med4ActionPerformed
+
+    private void nor_tf_Med5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nor_tf_Med5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nor_tf_Med5ActionPerformed
+
+    private void ls_btn_NewOrderPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_NewOrderPrescriptionActionPerformed
+        rightSide.removeAll();
+        rightSide.add(newOrderPrescription);
+        rightSide.repaint();
+        rightSide.revalidate(); 
+        
+        nor_lbl_Med3.setVisible(false);
+        nor_lbl_Med4.setVisible(false);
+        nor_lbl_Med5.setVisible(false);
+
+        nor_tf_Med3.setVisible(false);
+        nor_tf_Med4.setVisible(false);
+        nor_tf_Med5.setVisible(false);
+    }//GEN-LAST:event_ls_btn_NewOrderPrescriptionActionPerformed
+
+    private void notc_btn_OrderNowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notc_btn_OrderNowActionPerformed
+        rightSide.removeAll();
+        rightSide.add(clickedOrderNow);
+        rightSide.repaint();
+        rightSide.revalidate();
+    }//GEN-LAST:event_notc_btn_OrderNowActionPerformed
+
+    private void notc_tf_Med1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notc_tf_Med1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_notc_tf_Med1ActionPerformed
+
+    private void notc_tf_Med2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notc_tf_Med2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_notc_tf_Med2ActionPerformed
+
+    private void notc_tf_NotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notc_tf_NotesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_notc_tf_NotesActionPerformed
+
+    private void notc_tf_Med3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notc_tf_Med3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_notc_tf_Med3ActionPerformed
+
+    private void ls_btn_NewOrderOTCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_NewOrderOTCActionPerformed
+        rightSide.removeAll();
+        rightSide.add(newOrderOTC);
+        rightSide.repaint();
+        rightSide.revalidate();       
+        
+    }//GEN-LAST:event_ls_btn_NewOrderOTCActionPerformed
+
+    private void sp_btn_DeleteAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sp_btn_DeleteAccountActionPerformed
+        rightSide.removeAll();
+        rightSide.add(deleteAccountClicked);
+        rightSide.repaint();
+        rightSide.revalidate();
+    }//GEN-LAST:event_sp_btn_DeleteAccountActionPerformed
+
+    private void con_lbl_DoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_con_lbl_DoneActionPerformed
+        rightSide.removeAll();
+        rightSide.add(homePage);
+        rightSide.repaint();
+        rightSide.revalidate();
+    }//GEN-LAST:event_con_lbl_DoneActionPerformed
+
+    private void dac_lbl_DoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dac_lbl_DoneActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_dac_lbl_DoneActionPerformed
+
+    private void dac_lbl_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dac_lbl_BackActionPerformed
+        rightSide.removeAll();
+        rightSide.add(settingsPage);
+        rightSide.repaint();
+        rightSide.revalidate();
+    }//GEN-LAST:event_dac_lbl_BackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -586,21 +1147,21 @@ public class UserGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel TopPanel;
     private javax.swing.JButton cancelBtn;
     private javax.swing.JTextField cityTxt;
+    private javax.swing.JPanel clickedOrderNow;
+    private javax.swing.JLabel con_lbl_CON;
+    private javax.swing.JButton con_lbl_Done;
+    private javax.swing.JLabel con_lbl_Text;
+    private javax.swing.JButton dac_lbl_Back;
+    private javax.swing.JLabel dac_lbl_DelAcc;
+    private javax.swing.JButton dac_lbl_Done;
+    private javax.swing.JLabel dac_lbl_Text;
+    private javax.swing.JPanel deleteAccountClicked;
     private javax.swing.JButton editBtn;
     private javax.swing.JTextField firstNameTxt;
-    private javax.swing.JTextField firstNameTxt1;
-    private javax.swing.JTextField firstNameTxt2;
     private javax.swing.JComboBox<String> genderBx;
     private javax.swing.JPanel homePage;
-    private javax.swing.JButton homePageBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -609,9 +1170,6 @@ public class UserGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -626,18 +1184,61 @@ public class UserGUI extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastNameTxt;
     private javax.swing.JPanel leftSide;
+    private javax.swing.JButton ls_btn_1;
+    private javax.swing.JButton ls_btn_2;
+    private javax.swing.JButton ls_btn_Home;
+    private javax.swing.JButton ls_btn_LogOut;
+    private javax.swing.JButton ls_btn_NewOrderOTC;
+    private javax.swing.JButton ls_btn_NewOrderPrescription;
+    private javax.swing.JButton ls_btn_Settings;
     private javax.swing.JTextField mailTxt;
-    private javax.swing.JPanel newOrder;
+    private javax.swing.JPanel newOrderOTC;
+    private javax.swing.JPanel newOrderPrescription;
     private javax.swing.JPasswordField newPswrdTxt;
+    private javax.swing.JButton nor_btn_AddDelMed;
+    private javax.swing.JButton nor_btn_OrderNow;
+    private com.toedter.calendar.JDateChooser nor_jdc_PresDate;
+    private javax.swing.JLabel nor_lbl_BusLocNum;
+    private javax.swing.JLabel nor_lbl_DocNum;
+    private javax.swing.JLabel nor_lbl_HI;
+    private javax.swing.JLabel nor_lbl_HINum;
+    private javax.swing.JLabel nor_lbl_INum;
+    private javax.swing.JLabel nor_lbl_Med1;
+    private javax.swing.JLabel nor_lbl_Med2;
+    private javax.swing.JLabel nor_lbl_Med3;
+    private javax.swing.JLabel nor_lbl_Med4;
+    private javax.swing.JLabel nor_lbl_Med5;
+    private javax.swing.JLabel nor_lbl_NewOrder;
+    private javax.swing.JLabel nor_lbl_PresDate;
+    private javax.swing.JTextField nor_tf_BusLocNum;
+    private javax.swing.JTextField nor_tf_DocNum;
+    private javax.swing.JTextField nor_tf_HI;
+    private javax.swing.JTextField nor_tf_HINum;
+    private javax.swing.JTextField nor_tf_INum;
+    private javax.swing.JTextField nor_tf_Med1;
+    private javax.swing.JTextField nor_tf_Med2;
+    private javax.swing.JTextField nor_tf_Med3;
+    private javax.swing.JTextField nor_tf_Med4;
+    private javax.swing.JTextField nor_tf_Med5;
+    private javax.swing.JButton notc_btn_OrderNow;
+    private javax.swing.JLabel notc_lbl_Med1;
+    private javax.swing.JLabel notc_lbl_Med2;
+    private javax.swing.JLabel notc_lbl_Med3;
+    private javax.swing.JLabel notc_lbl_NewOrder;
+    private javax.swing.JLabel notc_lbl_Notes;
+    private javax.swing.JTextField notc_tf_Med1;
+    private javax.swing.JTextField notc_tf_Med2;
+    private javax.swing.JTextField notc_tf_Med3;
+    private javax.swing.JTextField notc_tf_Notes;
     private javax.swing.JPasswordField oldPswrdTxt;
     private javax.swing.JPasswordField repeatPaswrdTxt;
     private javax.swing.JButton resetBtn;
     private javax.swing.JPanel rightSide;
     private javax.swing.JButton saveBtn;
-    private javax.swing.JButton saveBtn1;
-    private javax.swing.JButton settingsBtn;
     private javax.swing.JPanel settingsPage;
+    private javax.swing.JButton sp_btn_DeleteAccount;
     private javax.swing.JTextField streetTxt;
+    private javax.swing.JPanel topPanel;
     private javax.swing.JTextField zipTxt;
     // End of variables declaration//GEN-END:variables
 }
