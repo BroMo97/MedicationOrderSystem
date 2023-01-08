@@ -72,11 +72,17 @@ public class UserGUI extends javax.swing.JFrame {
         cancelBtn = new javax.swing.JButton();
         resetBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
+        newOrder = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        firstNameTxt1 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        streetTxt1 = new javax.swing.JTextField();
+        saveBtn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         TopPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -392,10 +398,73 @@ public class UserGUI extends javax.swing.JFrame {
                     .addComponent(repeatPaswrdTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(resetBtn)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         rightSide.add(settingsPage, "card3");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel17.setText("New Order:");
+
+        jLabel18.setText("Health Insurance:");
+
+        firstNameTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstNameTxt1ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Insurance Nr.:");
+
+        saveBtn1.setText("Order Now");
+        saveBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveBtn1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout newOrderLayout = new javax.swing.GroupLayout(newOrder);
+        newOrder.setLayout(newOrderLayout);
+        newOrderLayout.setHorizontalGroup(
+            newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newOrderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(newOrderLayout.createSequentialGroup()
+                        .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(streetTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)
+                            .addComponent(saveBtn1))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(newOrderLayout.createSequentialGroup()
+                        .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(newOrderLayout.createSequentialGroup()
+                                .addGroup(newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(firstNameTxt1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE))
+                        .addContainerGap())))
+        );
+        newOrderLayout.setVerticalGroup(
+            newOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newOrderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(firstNameTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(streetTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(saveBtn1)
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+
+        rightSide.add(newOrder, "card4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -457,6 +526,14 @@ public class UserGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_editBtnActionPerformed
 
+    private void firstNameTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstNameTxt1ActionPerformed
+
+    private void saveBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveBtn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -498,6 +575,7 @@ public class UserGUI extends javax.swing.JFrame {
     private javax.swing.JTextField cityTxt;
     private javax.swing.JButton editBtn;
     private javax.swing.JTextField firstNameTxt;
+    private javax.swing.JTextField firstNameTxt1;
     private javax.swing.JComboBox<String> genderBx;
     private javax.swing.JPanel homePage;
     private javax.swing.JButton homePageBtn;
@@ -514,7 +592,10 @@ public class UserGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -529,15 +610,18 @@ public class UserGUI extends javax.swing.JFrame {
     private javax.swing.JTextField lastNameTxt;
     private javax.swing.JPanel leftSide;
     private javax.swing.JTextField mailTxt;
+    private javax.swing.JPanel newOrder;
     private javax.swing.JPasswordField newPswrdTxt;
     private javax.swing.JPasswordField oldPswrdTxt;
     private javax.swing.JPasswordField repeatPaswrdTxt;
     private javax.swing.JButton resetBtn;
     private javax.swing.JPanel rightSide;
     private javax.swing.JButton saveBtn;
+    private javax.swing.JButton saveBtn1;
     private javax.swing.JButton settingsBtn;
     private javax.swing.JPanel settingsPage;
     private javax.swing.JTextField streetTxt;
+    private javax.swing.JTextField streetTxt1;
     private javax.swing.JTextField zipTxt;
     // End of variables declaration//GEN-END:variables
 }
