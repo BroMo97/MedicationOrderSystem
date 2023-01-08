@@ -24,36 +24,36 @@ public class Orders {
     //private String reminder = null;
 
 
-    public Appointment(int id, String name, User host,
+    public Orders(int id, String name, User host,
     LocalDateTime dateTime, int duration,
     String location, String priority, ArrayList<User> participants) {
 this.setId(id);
 this.setName(name);
-this.setHost(host);
+//this.setHost(host);
 this.setDateTime(dateTime);
-this.setDuration(duration);
+//this.setDuration(duration);
 this.setLocation(location);
 this.setParticipants(participants);
 this.setPriority(priority);
 
 }
 
-public Appointment(String name, User host,
+public Orders(String name, User host,
     LocalDateTime dateTime, int duration,
     String location,String priority, ArrayList<User> participants) {
 
 this.setName(name);
-this.setHost(host);
+//this.setHost(host);
 this.setDateTime(dateTime);
-this.setDuration(duration);
+//this.setDuration(duration);
 this.setLocation(location);
 this.setParticipants(participants);
 this.setPriority(priority);
 
 }
 
-public Appointment(User user) {
-setHost(user);
+public Orders(User user) {
+//setHost(user);
 setDateTime(LocalDateTime.now());
 setParticipants(user);
 }
@@ -68,42 +68,42 @@ return id;
 }
 
 public String getName() {
-if (name != null) {
-    return name;
+if (order_name != null) {
+    return order_name;
 }
 return "";
 }
 
 public void setName(String _name) {
-name = _name;
+order_name = _name;
 }
 
-public User getHost() {
-return host;
-}
-
-public void setHost(User _host) {
-host = _host;
-}
+//public User getHost() {
+//return host;
+//}
+//
+//public void setHost(User _host) {
+//host = _host;
+//}
 
 public LocalDateTime getDateTime() {
-if (dateTime != null) {
-    return this.dateTime;
+if (order_date != null) {
+    return this.order_date;
 }
 return LocalDateTime.MAX;
 }
 
 public void setDateTime(LocalDateTime _dateTime) {
-dateTime = _dateTime;
+order_date = _dateTime;
 }
 
-public int getDuration() {
-return duration;
-}
-
-public void setDuration(int _duration) {
-duration = _duration;
-}
+//public int getDuration() {
+//return duration;
+//}
+//
+//public void setDuration(int _duration) {
+//duration = _duration;
+//}
 
 public String getLocation() {
 if (location != null) {
@@ -134,12 +134,12 @@ priority = _priority;
 }
 
 
-@Override
-public String toString() {
-return this.getName() + " "
-        + this.getDateTime().toLocalDate().toString() + " "
-        + this.getHost();
-}
+//@Override
+//public String toString() {
+//return this.getName() + " "
+//        + this.getDateTime().toLocalDate().toString() + " "
+//        + this.getHost();
+//}
 
 @Override
 public boolean equals(Object other) {

@@ -1,6 +1,7 @@
 package MedicationOrderSystem.Classes;
 import MedicationOrderSystem.Handler.*;
 
+
 public class Registration {
     private String username = null;
     private String firstName = null;

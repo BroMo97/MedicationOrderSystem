@@ -19,6 +19,7 @@ public class Login extends javax.swing.JFrame {
      * Creates new form Login
      */
     public Login() {
+        
         initComponents();
         addPlaceholderStyle(LoginUsernameFld);
         addPlaceholderStyle(LoginPasswordFld);
