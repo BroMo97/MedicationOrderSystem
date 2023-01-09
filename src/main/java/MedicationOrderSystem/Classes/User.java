@@ -21,12 +21,16 @@ public class User {
     private String phone = null;
 
     //Constructor
-    public User(String name, String surname, String username, String email, boolean role) {
+    public User(String name, String surname, String username, String email, boolean role, String gender, String address,LocalDateTime birthday,String phone ) 
+    {
         this.setFirstname(name);
         this.setLastname(surname);
         this.setUsername(username);
         this.setEmail(email);
         this.setRole(role);
+        this.setGender(gender);
+        this.setAddress(address);
+        this.setBirthday(birthday);
         //    this.setPassword(password);
     }
 
@@ -78,6 +82,41 @@ public class User {
     public void setRole(Boolean _role) {
         role = _role;
     }
+
+    public String getGender (){
+        return gender;
+    }
+
+    public void setGender(String _gender){
+        gender = _gender; 
+    }
+
+    public String getAddress (){
+        return address;
+    }
+
+    public void setAddress(String _address){
+        address = _address; 
+    }
+
+    public void setPhone(String _phone){
+        phone = _phone; 
+    }
+
+    public String getPhone (){
+        return phone;
+    }
+
+    public LocalDateTime getBirthday() {
+        if (birthday != null) {
+            return this.birthday;
+        }
+        return LocalDateTime.MAX;
+        }
+        
+        public void setBirthday(LocalDateTime _birthday) {
+        birthday = _birthday;
+        }
 
     @Override
     public String toString() {
