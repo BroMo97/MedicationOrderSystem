@@ -34,15 +34,15 @@
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="jcb_AcceptPolicy" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="RegistrationAgree" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                       <Component id="lbl_Username" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -61,7 +61,7 @@
                       <Component id="tf_ZIP" alignment="0" pref="130" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="57" max="32767" attributes="0"/>
+              <EmptySpace pref="45" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbl_FirstName" min="-2" max="-2" attributes="0"/>
                   <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
@@ -81,11 +81,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="btn_Register" pref="130" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jdc_Birthday" pref="130" max="32767" attributes="0"/>
-                      <Component id="lbl_Birthday" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="btn_Register" max="32767" attributes="0"/>
+                  <Component id="jdc_Birthday" pref="130" max="32767" attributes="0"/>
+                  <Component id="lbl_Birthday" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
           </Group>
@@ -95,23 +93,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl_FirstName" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl_Username" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tf_Username" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="tf_FirstName" min="-2" pref="37" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbl_FirstName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_Username" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="RegistrationAgree" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="tf_Username" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="tf_FirstName" min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
@@ -132,22 +124,23 @@
                           <Component id="tf_Password" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="tf_RepeatPassword" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="lbl_LastName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tf_LastName" min="-2" pref="37" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="lbl_StreetHouse" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tf_StreetHouse" min="-2" pref="37" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                  </Group>
+                  <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lbl_LastName" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="tf_LastName" min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lbl_StreetHouse" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="tf_StreetHouse" min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="lbl_ZIP" min="-2" max="-2" attributes="0"/>
@@ -167,6 +160,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tf_PhoneNumber" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jcb_AcceptPolicy" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lbl_Birthday" min="-2" max="-2" attributes="0"/>
@@ -180,7 +174,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="lbl_Icon">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/MOSLogo.png"/>
@@ -283,9 +277,9 @@
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="jdc_Birthday">
     </Component>
-    <Component class="javax.swing.JCheckBox" name="RegistrationAgree">
+    <Component class="javax.swing.JCheckBox" name="jcb_AcceptPolicy">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Agree to our policy"/>
+        <Property name="text" type="java.lang.String" value="Agree to our privacy policy"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>

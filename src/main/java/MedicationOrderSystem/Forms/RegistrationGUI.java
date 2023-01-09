@@ -79,7 +79,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jCalendar1 = new com.toedter.calendar.JCalendar();
-        jLabel2 = new javax.swing.JLabel();
+        lbl_Icon = new javax.swing.JLabel();
         lbl_Username = new javax.swing.JLabel();
         lbl_FirstName = new javax.swing.JLabel();
         lbl_Mail = new javax.swing.JLabel();
@@ -94,7 +94,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
         tf_Password = new javax.swing.JTextField();
         tf_RepeatPassword = new javax.swing.JTextField();
         jdc_Birthday = new com.toedter.calendar.JDateChooser();
-        RegistrationAgree = new javax.swing.JCheckBox();
+        jcb_AcceptPolicy = new javax.swing.JCheckBox();
         btn_Register = new javax.swing.JButton();
         lbl_Gender = new javax.swing.JLabel();
         jcb_Gender = new javax.swing.JComboBox<>();
@@ -119,7 +119,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
+        lbl_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
 
         lbl_Username.setText("Username");
 
@@ -204,8 +204,8 @@ public class RegistrationGUI extends javax.swing.JFrame {
             }
         });
 
-        RegistrationAgree.setText("Agree to our policy");
-        RegistrationAgree.setToolTipText("");
+        jcb_AcceptPolicy.setText("Agree to our privacy policy");
+        jcb_AcceptPolicy.setToolTipText("");
 
         btn_Register.setText("Register");
         btn_Register.addActionListener(new java.awt.event.ActionListener() {
@@ -318,12 +318,12 @@ public class RegistrationGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel2))
+                        .addGap(57, 57, 57)
+                        .addComponent(jcb_AcceptPolicy))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(RegistrationAgree)))
-                .addGap(53, 53, 53)
+                        .addGap(40, 40, 40)
+                        .addComponent(lbl_Icon)))
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lbl_Username)
@@ -339,7 +339,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
                         .addComponent(jcb_Gender, 0, 130, Short.MAX_VALUE)
                         .addComponent(lbl_ZIP)
                         .addComponent(tf_ZIP, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_FirstName)
                     .addComponent(lbl_RepeatMail)
@@ -357,30 +357,24 @@ public class RegistrationGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btn_Register, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jdc_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                        .addComponent(lbl_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btn_Register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jdc_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                    .addComponent(lbl_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(150, 150, 150))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_FirstName)
-                    .addComponent(lbl_Username, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_FirstName)
+                            .addComponent(lbl_Username, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RegistrationAgree))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_RepeatMail)
@@ -396,18 +390,19 @@ public class RegistrationGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl_LastName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl_StreetHouse)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_StreetHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lbl_Icon))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbl_LastName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbl_StreetHouse)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_StreetHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lbl_ZIP)
@@ -424,7 +419,8 @@ public class RegistrationGUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lbl_PhoneNumber)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tf_PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcb_AcceptPolicy, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addComponent(lbl_Birthday)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -632,7 +628,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_CityActionPerformed
 
     private void btn_RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegisterActionPerformed
-        // TODO add your handling code here:
         Registration registerUser = new Registration(tf_Username.getText(), tf_FirstName.getText(), tf_LastName.getText(), tf_Password.getText(), tf_Mail.getText(), tf_RepeatPassword.getText(), tf_RepeatMail.getText());
         UserHandler userHandler = new UserHandler();
         EncryptionHandler encrypt = new EncryptionHandler();
@@ -642,48 +637,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
         userHandler.createNewUser(registerUser, rootPaneCheckingEnabled, rootPaneCheckingEnabled);
         encrypt.encryptPassword(tf_Password.getText(), tf_Username.getText());
 
-//        this.setUsername(username);
-//        this.setFirstName(firstName);
-//        this.setLastName(lastName);
-//        this.setEmail(email);
-//        this.setPassword(password);
-//        this.setConfirm_email(confirm_email);
-//        this.setConfirm_password(confirm_password);     
-//        
-        
-        
-        
-        
-//        registerUser.
-//        
-//        if(userHandler.CheckInput(userHandler))
-//        
-//     
-        
-        
-        
-        
-//        Customer customer = new Customer();
-//        customer.setUsername(RegistrationUsernameFld.getText());
-//        customer.setPassword(RegistrationPasswordFld.getText());
-//        customer.setFirstname(RegistrationFirstnameFld.getText());
-//        customer.setLastname(RegistrationLastnameFld.getText());
-//        customer.setMail(RegistrationMailFld.getText());
-//        customer.setBirthday(RegistrationBirthday.getDateFormatString());
-//        customer.setStreet(RegistrationStreetFld.getText());
-//        customer.setZip(RegistrationZIPFld.getText());
-//        customer.setCity(RegistrationCityFld.getText());
-//        customer.setGender(RegistrationGenderBox.getSelectedItem().toString());
-//        customer.setPhone(RegistrationPhoneFld.getText());
-//        
-//        insertSuccess = customer.register();
-        
-//        if(insertSuccess){
-//            dispose();
-//        }
-//        else{
-//            JOptionPane.showMessageDialog(new RegistrationGUI(),"Error");
-//        }
     }//GEN-LAST:event_btn_RegisterActionPerformed
 
     private void tf_LastNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_LastNameFocusGained
@@ -748,16 +701,16 @@ public class RegistrationGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox RegistrationAgree;
     private javax.swing.JButton btn_Register;
     private com.toedter.calendar.JCalendar jCalendar1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JCheckBox jcb_AcceptPolicy;
     private javax.swing.JComboBox<String> jcb_Gender;
     private com.toedter.calendar.JDateChooser jdc_Birthday;
     private javax.swing.JLabel lbl_Birthday;
     private javax.swing.JLabel lbl_City;
     private javax.swing.JLabel lbl_FirstName;
     private javax.swing.JLabel lbl_Gender;
+    private javax.swing.JLabel lbl_Icon;
     private javax.swing.JLabel lbl_LastName;
     private javax.swing.JLabel lbl_Mail;
     private javax.swing.JLabel lbl_Password;

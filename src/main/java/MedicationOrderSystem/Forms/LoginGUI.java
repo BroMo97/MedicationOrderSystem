@@ -23,8 +23,8 @@ public class LoginGUI extends javax.swing.JFrame {
     public LoginGUI() {
         
         initComponents();
-        addPlaceholderStyle(LoginUsernameFld);
-        addPlaceholderStyle(LoginPasswordFld);
+        addPlaceholderStyle(tf_Username);
+        addPlaceholderStyle(tf_Password);
     }
     
     public void addPlaceholderStyle(JTextField textField){
@@ -50,18 +50,18 @@ public class LoginGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        LoginUsernameFld = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        LoginPasswordFld = new javax.swing.JPasswordField();
-        LoginRegistrationBtn = new javax.swing.JButton();
-        LoginPasswordResetBtn = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        lbl_Title = new javax.swing.JLabel();
+        lbl_Icon = new javax.swing.JLabel();
+        lbl_IconPassword = new javax.swing.JLabel();
+        tf_Username = new javax.swing.JTextField();
+        lbl_IconUser = new javax.swing.JLabel();
+        tf_Password = new javax.swing.JPasswordField();
+        btn_Register = new javax.swing.JButton();
+        lbl_frame = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MOS System");
+        setMaximumSize(new java.awt.Dimension(347, 650));
         setResizable(false);
         addWindowFocusListener(new java.awt.event.WindowFocusListener() {
             public void windowGainedFocus(java.awt.event.WindowEvent evt) {
@@ -72,151 +72,149 @@ public class LoginGUI extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setText("MOS System");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 35, -1, -1));
+        lbl_Title.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        lbl_Title.setForeground(new java.awt.Color(0, 204, 204));
+        lbl_Title.setText("MOS System");
+        lbl_Title.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(lbl_Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 95, -1, -1));
+        lbl_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSLogo.png"))); // NOI18N
+        getContentPane().add(lbl_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/password.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
+        lbl_IconPassword.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lbl_IconPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/password.png"))); // NOI18N
+        getContentPane().add(lbl_IconPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
 
-        LoginUsernameFld.setText("Username");
-        LoginUsernameFld.addFocusListener(new java.awt.event.FocusAdapter() {
+        tf_Username.setText("Username");
+        tf_Username.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                LoginUsernameFldFocusGained(evt);
+                tf_UsernameFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                LoginUsernameFldFocusLost(evt);
+                tf_UsernameFocusLost(evt);
             }
         });
-        LoginUsernameFld.addKeyListener(new java.awt.event.KeyAdapter() {
+        tf_Username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                LoginUsernameFldKeyPressed(evt);
+                tf_UsernameKeyPressed(evt);
             }
         });
-        getContentPane().add(LoginUsernameFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 219, 37));
+        getContentPane().add(tf_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 219, 37));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/username.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
+        lbl_IconUser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lbl_IconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/username.png"))); // NOI18N
+        getContentPane().add(lbl_IconUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
-        LoginPasswordFld.setText("Password");
-        LoginPasswordFld.setEchoChar('\u0000');
-        LoginPasswordFld.addFocusListener(new java.awt.event.FocusAdapter() {
+        tf_Password.setText("Password");
+        tf_Password.setEchoChar('\u0000');
+        tf_Password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                LoginPasswordFldFocusGained(evt);
+                tf_PasswordFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                LoginPasswordFldFocusLost(evt);
+                tf_PasswordFocusLost(evt);
             }
         });
-        LoginPasswordFld.addKeyListener(new java.awt.event.KeyAdapter() {
+        tf_Password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                LoginPasswordFldKeyPressed(evt);
+                tf_PasswordKeyPressed(evt);
             }
         });
-        getContentPane().add(LoginPasswordFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 219, 37));
+        getContentPane().add(tf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 219, 37));
 
-        LoginRegistrationBtn.setText("Registration");
-        LoginRegistrationBtn.addActionListener(new java.awt.event.ActionListener() {
+        btn_Register.setText("Register (new account)");
+        btn_Register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginRegistrationBtnActionPerformed(evt);
+                btn_RegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginRegistrationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, -1, -1));
+        getContentPane().add(btn_Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 160, 30));
 
-        LoginPasswordResetBtn.setText("Password reset");
-        getContentPane().add(LoginPasswordResetBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, -1, -1));
-
-        LoginLoginbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
-        LoginLoginbtn.addActionListener(new java.awt.event.ActionListener() {
+        btn_Login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
+        btn_Login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginLoginbtnActionPerformed(evt);
+                btn_LoginActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginLoginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 50, 50));
+        getContentPane().add(btn_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 70, 70));
 
-        jLabel5.setToolTipText("");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 350, 650));
+        lbl_frame.setToolTipText("");
+        lbl_frame.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(lbl_frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 350, 650));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoginRegistrationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginRegistrationBtnActionPerformed
+    private void btn_RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegisterActionPerformed
         // TODO add your handling code here:
         new RegistrationGUI().setVisible(true);
-    }//GEN-LAST:event_LoginRegistrationBtnActionPerformed
+    }//GEN-LAST:event_btn_RegisterActionPerformed
 
-    private void LoginUsernameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameFldFocusGained
+    private void tf_UsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_UsernameFocusGained
         // TODO add your handling code here:
-        if(LoginUsernameFld.getText().equals("Username")){
-            LoginUsernameFld.setText(null);
-            LoginUsernameFld.requestFocus();
-            removePlaceholderStyle(LoginUsernameFld);
+        if(tf_Username.getText().equals("Username")){
+            tf_Username.setText(null);
+            tf_Username.requestFocus();
+            removePlaceholderStyle(tf_Username);
         }
-    }//GEN-LAST:event_LoginUsernameFldFocusGained
+    }//GEN-LAST:event_tf_UsernameFocusGained
 
-    private void LoginPasswordFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginPasswordFldFocusGained
+    private void tf_PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_PasswordFocusGained
         // TODO add your handling code here:
-        if(LoginPasswordFld.getText().equals("Password")){
-            LoginPasswordFld.setText(null);
-            LoginPasswordFld.requestFocus();
-            LoginPasswordFld.setEchoChar('\u2022');
-            removePlaceholderStyle(LoginPasswordFld);
+        if(tf_Password.getText().equals("Password")){
+            tf_Password.setText(null);
+            tf_Password.requestFocus();
+            tf_Password.setEchoChar('\u2022');
+            removePlaceholderStyle(tf_Password);
         }
-    }//GEN-LAST:event_LoginPasswordFldFocusGained
+    }//GEN-LAST:event_tf_PasswordFocusGained
 
-    private void LoginUsernameFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameFldFocusLost
+    private void tf_UsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_UsernameFocusLost
         // TODO add your handling code here:
-        if(LoginUsernameFld.getText().length()==0){
-            addPlaceholderStyle(LoginUsernameFld);
-            LoginUsernameFld.setText("Username");
+        if(tf_Username.getText().length()==0){
+            addPlaceholderStyle(tf_Username);
+            tf_Username.setText("Username");
         }
-    }//GEN-LAST:event_LoginUsernameFldFocusLost
+    }//GEN-LAST:event_tf_UsernameFocusLost
 
-    private void LoginPasswordFldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginPasswordFldFocusLost
+    private void tf_PasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_PasswordFocusLost
         // TODO add your handling code here:
-        if(LoginPasswordFld.getText().length()==0){
-            addPlaceholderStyle(LoginPasswordFld);
-            LoginPasswordFld.setText("Password");
-            LoginPasswordFld.setEchoChar('\u0000');
+        if(tf_Password.getText().length()==0){
+            addPlaceholderStyle(tf_Password);
+            tf_Password.setText("Password");
+            tf_Password.setEchoChar('\u0000');
         }
-    }//GEN-LAST:event_LoginPasswordFldFocusLost
+    }//GEN-LAST:event_tf_PasswordFocusLost
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         // TODO add your handling code here:
         this.requestFocusInWindow();
     }//GEN-LAST:event_formWindowGainedFocus
 
-    private void LoginPasswordFldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginPasswordFldKeyPressed
+    private void tf_PasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_PasswordKeyPressed
         // TODO add your handling code here:
         int key = evt.getKeyCode();
         
         if(key == KeyEvent.VK_ENTER){
-            LoginLoginbtn.doClick();
+            btn_Login.doClick();
         }
-    }//GEN-LAST:event_LoginPasswordFldKeyPressed
+    }//GEN-LAST:event_tf_PasswordKeyPressed
 
-    private void LoginLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginLoginbtnActionPerformed
+    private void btn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LoginActionPerformed
         // TODO add your handling code here:
         new UserGUI().setVisible(true);
         dispose();
-    }//GEN-LAST:event_LoginLoginbtnActionPerformed
+    }//GEN-LAST:event_btn_LoginActionPerformed
 
-    private void LoginUsernameFldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginUsernameFldKeyPressed
+    private void tf_UsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_UsernameKeyPressed
         // TODO add your handling code here:
         int key = evt.getKeyCode();
         
         if(key == KeyEvent.VK_ENTER){
-            LoginLoginbtn.doClick();
+            btn_Login.doClick();
         }
-    }//GEN-LAST:event_LoginUsernameFldKeyPressed
+    }//GEN-LAST:event_tf_UsernameKeyPressed
 
     /**
      * @param args the command line arguments
@@ -255,16 +253,15 @@ public class LoginGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private final javax.swing.JButton LoginLoginbtn = new javax.swing.JButton();
-    private javax.swing.JPasswordField LoginPasswordFld;
-    private javax.swing.JButton LoginPasswordResetBtn;
-    private javax.swing.JButton LoginRegistrationBtn;
-    private javax.swing.JTextField LoginUsernameFld;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private final javax.swing.JButton btn_Login = new javax.swing.JButton();
+    private javax.swing.JButton btn_Register;
+    private javax.swing.JLabel lbl_Icon;
+    private javax.swing.JLabel lbl_IconPassword;
+    private javax.swing.JLabel lbl_IconUser;
+    private javax.swing.JLabel lbl_Title;
+    private javax.swing.JLabel lbl_frame;
+    private javax.swing.JPasswordField tf_Password;
+    private javax.swing.JTextField tf_Username;
     // End of variables declaration//GEN-END:variables
 
 }
