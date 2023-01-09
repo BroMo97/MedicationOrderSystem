@@ -5,7 +5,7 @@
 
 package MedicationOrderSystem;
 
-import MedicationOrderSystem.Forms.Login;
+import MedicationOrderSystem.Forms.LoginGUI;
 import java.sql.Connection;
 
 
@@ -19,6 +19,6 @@ public class MedicationOrderSystem {
         System.out.println("Hello ProgEx! & Tim");
 //        DBConnection con = new DBConnection();
 //        System.out.println(con.getCon());
-        new Login().setVisible(true);
+        new LoginGUI().setVisible(true);
     }
 }

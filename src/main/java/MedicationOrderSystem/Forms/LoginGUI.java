@@ -6,7 +6,7 @@ package MedicationOrderSystem.Forms;
 
 
 import MedicationOrderSystem.Forms.UserGUI;
-import MedicationOrderSystem.Forms.Registration;
+import MedicationOrderSystem.Forms.RegistrationGUI;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
@@ -15,12 +15,12 @@ import javax.swing.JTextField;
  *
  * @author OENAL
  */
-public class Login extends javax.swing.JFrame {
+public class LoginGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public LoginGUI() {
         
         initComponents();
         addPlaceholderStyle(LoginUsernameFld);
@@ -150,7 +150,7 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginRegistrationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginRegistrationBtnActionPerformed
         // TODO add your handling code here:
-        new Registration().setVisible(true);
+        new RegistrationGUI().setVisible(true);
     }//GEN-LAST:event_LoginRegistrationBtnActionPerformed
 
     private void LoginUsernameFldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameFldFocusGained
@@ -235,20 +235,21 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new LoginGUI().setVisible(true);
             }
         });
     }

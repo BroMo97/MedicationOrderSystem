@@ -948,7 +948,7 @@ public class UserGUI extends javax.swing.JFrame {
 
     private void ls_btn_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ls_btn_LogOutActionPerformed
         // TODO add your handling code here:
-        new Login().setVisible(true);
+        new LoginGUI().setVisible(true);
         dispose();
     }//GEN-LAST:event_ls_btn_LogOutActionPerformed
 
