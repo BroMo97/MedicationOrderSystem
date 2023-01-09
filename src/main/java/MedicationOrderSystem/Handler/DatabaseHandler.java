@@ -2,7 +2,6 @@ package MedicationOrderSystem.Handler;
 
 
 import MedicationOrderSystem.Classes.*;
-import java.sql.*;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -40,27 +39,28 @@ public class DatabaseHandler {
      * @param User user which will be created
      * @param password encrypted
      */
-    public void createNewUser(User User, String password) {
-        String setuser = "INSERT INTO user( name, surname, birthday, address, password, deleted, username, gender, role, mail, phone) VALUES (?,?,?,?,?)";
-        try ( PreparedStatement st = con.prepareStatement(setuser)) {
-            st.setString(1, User.getFirstname());
-            st.setString(2, User.getLastname());
-            st.setString(3, User.getBirthday();
-            st.setString(4, User.getAddress());
-            st.setString(5, password);
-            st.setString(6, "0");
-            st.setString(7, User.getUsername());
-            st.setString(8, User.getGender());
-            st.setString(9, User.getRole());
-            st.setString(10, User.getEmail());
-            st.setString(11, User.getPhone());
-            st.executeUpdate();
-        } catch (SQLException ex) {
-            java.util.logging.Logger.getLogger(DatabaseHandler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        System.out.println("Insert new User Successfull");
+//    public void createNewUser(User User, String password) {
+//        String setuser = "INSERT INTO user( name, surname, birthday, address, password, deleted, username, gender, role, mail, phone) VALUES (?,?,?,?,?)";
+//        try ( PreparedStatement st = con.prepareStatement(setuser)) {
+//            st.setString(1, User.getFirstname());
+//            st.setString(2, User.getLastname());
+//            st.setString(3, User.getBirthday();
+//            st.setString(4, User.getAddress());
+//            st.setString(5, password);
+//            st.setString(6, "0");
+//            st.setString(7, User.getUsername());
+//            st.setString(8, User.getGender());
+//            st.setString(9, User.getRole());
+//            st.setString(10, User.getEmail());
+//            st.setString(11, User.getPhone());
+//            st.executeUpdate();
+//        } catch (SQLException ex) {
+//            java.util.logging.Logger.getLogger(DatabaseHandler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        System.out.println("Insert new User Successfull");
+//
+//    }
 
-    }
 
      /**
      * Checks whether an User exists with the entered username and password 
@@ -271,22 +271,22 @@ public class DatabaseHandler {
 
     }
 
-        /**
-     * Deletes an {@link User}
-     * @param user which will be deleted
-     */
-    public void deleteUser(User user) {
-        String sql = "Update user SET deleted = 1  WHERE username = ?";
-        try ( PreparedStatement st = con.prepareStatement(sql)) {
-            st.setString(1, user.getUsername());
-            st.executeUpdate();
-
-            deleteUserinParticipants(user);
-            deleteEventsOfHost(user);
-
-        } catch (SQLException ex) {
-            Logger.getLogger(DatabaseHandler.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //delete everywhere where host and event 
-    }
+//        /**
+//     * Deletes an {@link User}
+//     * @param user which will be deleted
+//     */
+//    public void deleteUser(User user) {
+//        String sql = "Update user SET deleted = 1  WHERE username = ?";
+//        try ( PreparedStatement st = con.prepareStatement(sql)) {
+//            st.setString(1, user.getUsername());
+//            st.executeUpdate();
+//
+//            deleteUserinParticipants(user);
+//            deleteEventsOfHost(user);
+//
+//        } catch (SQLException ex) {
+//            Logger.getLogger(DatabaseHandler.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //delete everywhere where host and event 
+//    }
 }

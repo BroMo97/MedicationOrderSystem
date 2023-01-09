@@ -1,6 +1,5 @@
 package MedicationOrderSystem.Classes;
 import java.time.LocalDateTime;
-import MedicationOrderSystem.Handler.*;
 
 import MedicationOrderSystem.Handler.*;
 /**
@@ -14,9 +13,7 @@ public class User {
     private String surname = null;
     private String username = null;
     private String email = null;
-    public enum Role{CUSTOMER, EMPLOYEE, ADMIN};
-    private Role userRole = 0;
-    
+    private boolean role = false;
 // ---- hier bitte getter setter einfügen und in Constructor hinzufügen ----     
     private String gender = null; 
     private String address = null; 
@@ -24,13 +21,12 @@ public class User {
     private String phone = null;
 
     //Constructor
-    public User(String name, String surname, String username, String email, enum role) {
+    public User(String name, String surname, String username, String email, boolean role) {
         this.setFirstname(name);
         this.setLastname(surname);
         this.setUsername(username);
         this.setEmail(email);
         this.setRole(role);
-        
         //    this.setPassword(password);
     }
 
@@ -75,11 +71,11 @@ public class User {
         return "User";
     }
 
-    public role getRole() {
+    public boolean getRole() {
         return role;
     }
 
-    public void setRole(Enum _role) {
+    public void setRole(Boolean _role) {
         role = _role;
     }
 

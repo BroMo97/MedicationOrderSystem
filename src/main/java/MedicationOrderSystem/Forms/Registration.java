@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package MedicationOrderSystem;
+package MedicationOrderSystem.Forms;
+import MedicationOrderSystem.Handler.*;
+import MedicationOrderSystem.Classes.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -609,30 +611,39 @@ public class Registration extends javax.swing.JFrame {
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
         // TODO add your handling code here:
-        boolean insertSuccess;
-        DBConnection con = new DBConnection();
+        Registration registerUser = new Registration();
+        UserHandler userHandler = new UserHandler();
+//        
+//        registerUser.
+//        
+//        if(userHandler.CheckInput(userHandler))
+//        
+//     
         
-        Customer customer = new Customer();
-        customer.setUsername(RegistrationUsernameFld.getText());
-        customer.setPassword(RegistrationPasswordFld.getText());
-        customer.setFirstname(RegistrationFirstnameFld.getText());
-        customer.setLastname(RegistrationLastnameFld.getText());
-        customer.setMail(RegistrationMailFld.getText());
-        customer.setBirthday(RegistrationBirthday.getDateFormatString());
-        customer.setStreet(RegistrationStreetFld.getText());
-        customer.setZip(RegistrationZIPFld.getText());
-        customer.setCity(RegistrationCityFld.getText());
-        customer.setGender(RegistrationGenderBox.getSelectedItem().toString());
-        customer.setPhone(RegistrationPhoneFld.getText());
         
-        insertSuccess = customer.register();
         
-        if(insertSuccess){
-            dispose();
-        }
-        else{
-            JOptionPane.showMessageDialog(new Registration(),"Error");
-        }
+        
+//        Customer customer = new Customer();
+//        customer.setUsername(RegistrationUsernameFld.getText());
+//        customer.setPassword(RegistrationPasswordFld.getText());
+//        customer.setFirstname(RegistrationFirstnameFld.getText());
+//        customer.setLastname(RegistrationLastnameFld.getText());
+//        customer.setMail(RegistrationMailFld.getText());
+//        customer.setBirthday(RegistrationBirthday.getDateFormatString());
+//        customer.setStreet(RegistrationStreetFld.getText());
+//        customer.setZip(RegistrationZIPFld.getText());
+//        customer.setCity(RegistrationCityFld.getText());
+//        customer.setGender(RegistrationGenderBox.getSelectedItem().toString());
+//        customer.setPhone(RegistrationPhoneFld.getText());
+//        
+//        insertSuccess = customer.register();
+        
+//        if(insertSuccess){
+//            dispose();
+//        }
+//        else{
+//            JOptionPane.showMessageDialog(new Registration(),"Error");
+//        }
     }//GEN-LAST:event_registerBtnActionPerformed
 
     

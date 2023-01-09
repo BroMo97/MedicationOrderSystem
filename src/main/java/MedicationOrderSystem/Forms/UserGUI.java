@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package MedicationOrderSystem;
+package MedicationOrderSystem.Forms;
 
 /**
  *
@@ -746,12 +746,10 @@ public class UserGUI extends javax.swing.JFrame {
         newOrderOTCLayout.setHorizontalGroup(
             newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(newOrderOTCLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(notc_lbl_NewOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
                     .addGroup(newOrderOTCLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(notc_lbl_NewOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE))
-                    .addGroup(newOrderOTCLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(newOrderOTCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(notc_tf_Med1)
