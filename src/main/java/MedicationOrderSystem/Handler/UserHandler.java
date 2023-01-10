@@ -60,6 +60,10 @@ public class UserHandler {
                              toBeCreated.getEmail(), 
                              false);
             
+            
+            
+            //createdUser.setFirstname(toBeCreated.getFirstName());
+            
             return createdUser;
         }
 

@@ -39,20 +39,20 @@ public class DatabaseHandler {
      * @param User user which will be created
      * @param password encrypted
      */
-    public void createNewUser(User User, String password) {
+    public void createNewUser(User user, String password) {
         String setuser = "INSERT INTO user( name, surname, birthday, address, password, deleted, username, gender, role, mail, phone) VALUES (?,?,?,?,?)";
         try ( PreparedStatement st = con.prepareStatement(setuser)) {
-            st.setString(1, User.getFirstname());
-            st.setString(2, User.getLastname());
-            st.setString(3, User.getBirthday();
-            st.setString(4, User.getAddress());
+            st.setString(1, user.getFirstname());
+            st.setString(2, user.getLastname());
+            st.setString(3, user.getBirthday().toString());
+            st.setString(4, user.getAddress());
             st.setString(5, password);
             st.setString(6, "0");
-            st.setString(7, User.getUsername());
-            st.setString(8, User.getGender());
-            st.setString(9, User.getRole());
-            st.setString(10, User.getEmail());
-            st.setString(11, User.getPhone());
+            st.setString(7, user.getUsername());
+            st.setString(8, user.getGender());
+            st.setString(9, String.valueOf(user.getRole()));
+            st.setString(10, user.getEmail());
+            st.setString(11, user.getPhone());
             st.executeUpdate();
         } catch (SQLException ex) {
             java.util.logging.Logger.getLogger(DatabaseHandler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -140,7 +140,7 @@ public class DatabaseHandler {
             ps.setString(1, user.getEmail());
             ps.setString(2, user.getFirstname());
             ps.setString(3, user.getLastname());
-            ps.setBoolean(4, user.getRole());
+            ps.setString(4, String.valueOf(user.getRole()));
             ps.setString(5, user.getUsername());            
             ps.executeUpdate();
         } catch (SQLException ex) {
@@ -233,7 +233,7 @@ public class DatabaseHandler {
      * fetches the information of one dataset from the database 
      * and sets these information into an new {@link User} 
      * @param rs
-     * @return an new User object
+     * @return a new User object
      * @throws SQLException 
      */
     // User String firstname, String lastname, String username, String email)
@@ -245,7 +245,7 @@ public class DatabaseHandler {
                 rs.getString(2),
                 rs.getString(7),
                 rs.getString(10),
-                rs.getBoolean(9)
+                rs.getString(9)
         );
 
     }
@@ -262,7 +262,7 @@ public class DatabaseHandler {
             st.setString(1, user.getFirstname());
             st.setString(2, user.getLastname());
             st.setString(3, user.getEmail());
-            st.setBoolean(4, user.getRole());
+            st.setString(4, String.valueOf(user.getRole()));
             st.setString(5, user.getUsername());
             st.executeUpdate();
         } catch (SQLException ex) {

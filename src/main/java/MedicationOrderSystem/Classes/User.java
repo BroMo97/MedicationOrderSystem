@@ -13,24 +13,29 @@ public class User {
     private String surname = null;
     private String username = null;
     private String email = null;
-    private boolean role = false;
+    private int role = 0;
 // ---- hier bitte getter setter einfügen und in Constructor hinzufügen ----     
     private String gender = null; 
     private String address = null; 
     private LocalDateTime birthday = null;
     private String phone = null;
-
+    
+    private enum Rank{CUSTOMER, ADMIN};
+    private Rank userRank;
+    
+    
     //Constructor
-    public User(String name, String surname, String username, String email, boolean role, String gender, String address,LocalDateTime birthday,String phone ) 
+    public User(String name, String surname, String username, String email, int role, String gender, String address,LocalDateTime birthday,String phone, Rank _userRank ) 
     {
         this.setFirstname(name);
         this.setLastname(surname);
         this.setUsername(username);
         this.setEmail(email);
-        this.setRole(role);
+        this.setRole(role); //LASS EIN ENUM VERWENDEN
         this.setGender(gender);
         this.setAddress(address);
         this.setBirthday(birthday);
+        this.userRank = _userRank;
         //    this.setPassword(password);
     }
 
@@ -68,18 +73,18 @@ public class User {
     }
     //public void setPassword(String _password) {password=_password;}
 
-    public String getRoleName() {
-        if (this.role) {
-            return "Admin";
-        }
-        return "User";
-    }
+//    public String getRoleName() {
+//        if (this.role) {
+//            return "Admin";
+//        }
+//        return "User";
+//    }
 
-    public boolean getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(Boolean _role) {
+    public void setRole(int _role) {
         role = _role;
     }
 

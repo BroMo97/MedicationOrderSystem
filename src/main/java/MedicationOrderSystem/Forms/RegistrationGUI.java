@@ -34,7 +34,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
         addPlaceholderStyle(tf_RepeatPassword);
         addPlaceholderStyle(tf_ZIP);
         addPlaceholderStyle(tf_City);
-        addPlaceholderStyle(tf_StreetHouse);
+        addPlaceholderStyle(tf_Street);
         addPlaceholderStyle(tf_PhoneNumber);
         addPlaceholderStyle(jcb_Gender);
     }
@@ -106,8 +106,10 @@ public class RegistrationGUI extends javax.swing.JFrame {
         tf_City = new javax.swing.JTextField();
         tf_LastName = new javax.swing.JTextField();
         lbl_LastName = new javax.swing.JLabel();
-        lbl_StreetHouse = new javax.swing.JLabel();
-        tf_StreetHouse = new javax.swing.JTextField();
+        lbl_Street = new javax.swing.JLabel();
+        tf_Street = new javax.swing.JTextField();
+        lbl_Housenumber = new javax.swing.JLabel();
+        tf_Housenumber = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registration");
@@ -133,7 +135,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         lbl_RepeatPassword.setText("Repeat Password");
 
-        lbl_Birthday.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_Birthday.setText("Birthday");
 
         tf_FirstName.setText("First Name");
@@ -294,20 +295,37 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         lbl_LastName.setText("Last Name");
 
-        lbl_StreetHouse.setText("Street, Housenumber");
+        lbl_Street.setText("Street");
 
-        tf_StreetHouse.setText("Street, Housenumber");
-        tf_StreetHouse.addFocusListener(new java.awt.event.FocusAdapter() {
+        tf_Street.setText("Street");
+        tf_Street.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                tf_StreetHouseFocusGained(evt);
+                tf_StreetFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                tf_StreetHouseFocusLost(evt);
+                tf_StreetFocusLost(evt);
             }
         });
-        tf_StreetHouse.addActionListener(new java.awt.event.ActionListener() {
+        tf_Street.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_StreetHouseActionPerformed(evt);
+                tf_StreetActionPerformed(evt);
+            }
+        });
+
+        lbl_Housenumber.setText("Housenumber");
+
+        tf_Housenumber.setText("Housenumber");
+        tf_Housenumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_HousenumberFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tf_HousenumberFocusLost(evt);
+            }
+        });
+        tf_Housenumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_HousenumberActionPerformed(evt);
             }
         });
 
@@ -316,116 +334,131 @@ public class RegistrationGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_Icon)
+                    .addComponent(jcb_AcceptPolicy))
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jcb_AcceptPolicy))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(lbl_Icon)))
-                .addGap(47, 47, 47)
+                    .addComponent(lbl_Username)
+                    .addComponent(tf_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_ZIP)
+                    .addComponent(tf_ZIP, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Password)
+                    .addComponent(tf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_FirstName)
+                    .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Street)
+                    .addComponent(tf_Street, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Mail)
+                    .addComponent(tf_Mail, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jdc_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lbl_Username)
-                        .addComponent(tf_Username, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                        .addComponent(lbl_Mail)
-                        .addComponent(lbl_Password)
-                        .addComponent(tf_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                        .addComponent(tf_Mail))
+                    .addComponent(lbl_City)
+                    .addComponent(tf_City, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_RepeatPassword)
+                    .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_LastName)
                     .addComponent(tf_LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lbl_Gender)
-                        .addComponent(jcb_Gender, 0, 130, Short.MAX_VALUE)
-                        .addComponent(lbl_ZIP)
-                        .addComponent(tf_ZIP, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_FirstName)
+                        .addComponent(jcb_Gender, 0, 130, Short.MAX_VALUE))
                     .addComponent(lbl_RepeatMail)
-                    .addComponent(lbl_RepeatPassword)
-                    .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_RepeatMail, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_StreetHouse)
-                    .addComponent(tf_StreetHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_PhoneNumber)
-                    .addComponent(lbl_City)
-                    .addComponent(tf_City, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_Housenumber)
+                    .addComponent(tf_Housenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btn_Register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jdc_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                    .addComponent(lbl_Birthday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(150, 150, 150))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_Register, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_Username)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(lbl_Gender)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcb_Gender, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_FirstName)
-                            .addComponent(lbl_Username, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_LastName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_FirstName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_FirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_City)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_City, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_ZIP)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_ZIP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_Street)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_Street, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_Housenumber)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_Housenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_RepeatMail)
-                            .addComponent(lbl_Mail, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_RepeatMail)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_RepeatMail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_Mail)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_Mail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_RepeatMail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_Mail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_Password)
-                            .addComponent(lbl_RepeatPassword))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lbl_Icon))
-                .addGap(18, 18, 18)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_RepeatPassword)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_RepeatPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_Password)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(lbl_Icon)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jcb_AcceptPolicy)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_LastName)
+                        .addComponent(lbl_Birthday)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_LastName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jdc_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_StreetHouse)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_StreetHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_ZIP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_ZIP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_Gender)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jcb_Gender, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_City)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_City, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addComponent(lbl_PhoneNumber)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jcb_AcceptPolicy, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addComponent(lbl_Birthday)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jdc_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(tf_PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addComponent(btn_Register)
                 .addContainerGap())
         );
@@ -647,21 +680,33 @@ public class RegistrationGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_LastNameFocusLost
 
-    private void tf_StreetHouseFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_StreetHouseFocusGained
+    private void tf_StreetFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_StreetFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_StreetHouseFocusGained
+    }//GEN-LAST:event_tf_StreetFocusGained
 
-    private void tf_StreetHouseFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_StreetHouseFocusLost
+    private void tf_StreetFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_StreetFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_StreetHouseFocusLost
+    }//GEN-LAST:event_tf_StreetFocusLost
 
-    private void tf_StreetHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_StreetHouseActionPerformed
+    private void tf_StreetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_StreetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_StreetHouseActionPerformed
+    }//GEN-LAST:event_tf_StreetActionPerformed
 
     private void tf_LastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_LastNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_LastNameActionPerformed
+
+    private void tf_HousenumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_HousenumberFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_HousenumberFocusGained
+
+    private void tf_HousenumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_HousenumberFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_HousenumberFocusLost
+
+    private void tf_HousenumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_HousenumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_HousenumberActionPerformed
 
     
     /**
@@ -710,6 +755,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_City;
     private javax.swing.JLabel lbl_FirstName;
     private javax.swing.JLabel lbl_Gender;
+    private javax.swing.JLabel lbl_Housenumber;
     private javax.swing.JLabel lbl_Icon;
     private javax.swing.JLabel lbl_LastName;
     private javax.swing.JLabel lbl_Mail;
@@ -717,18 +763,19 @@ public class RegistrationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_PhoneNumber;
     private javax.swing.JLabel lbl_RepeatMail;
     private javax.swing.JLabel lbl_RepeatPassword;
-    private javax.swing.JLabel lbl_StreetHouse;
+    private javax.swing.JLabel lbl_Street;
     private javax.swing.JLabel lbl_Username;
     private javax.swing.JLabel lbl_ZIP;
     private javax.swing.JTextField tf_City;
     private javax.swing.JTextField tf_FirstName;
+    private javax.swing.JTextField tf_Housenumber;
     private javax.swing.JTextField tf_LastName;
     private javax.swing.JTextField tf_Mail;
     private javax.swing.JTextField tf_Password;
     private javax.swing.JTextField tf_PhoneNumber;
     private javax.swing.JTextField tf_RepeatMail;
     private javax.swing.JTextField tf_RepeatPassword;
-    private javax.swing.JTextField tf_StreetHouse;
+    private javax.swing.JTextField tf_Street;
     private javax.swing.JTextField tf_Username;
     private javax.swing.JTextField tf_ZIP;
     // End of variables declaration//GEN-END:variables

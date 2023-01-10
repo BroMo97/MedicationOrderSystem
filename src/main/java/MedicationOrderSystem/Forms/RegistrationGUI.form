@@ -32,141 +32,163 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="jcb_AcceptPolicy" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcb_AcceptPolicy" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lbl_Username" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_Username" pref="130" max="32767" attributes="0"/>
-                      <Component id="lbl_Mail" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_Password" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_Password" pref="130" max="32767" attributes="0"/>
-                      <Component id="tf_Mail" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Component id="lbl_LastName" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="tf_LastName" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lbl_Gender" min="-2" max="-2" attributes="0"/>
-                      <Component id="jcb_Gender" alignment="0" pref="130" max="32767" attributes="0"/>
-                      <Component id="lbl_ZIP" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_ZIP" alignment="0" pref="130" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lbl_Username" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_Username" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_ZIP" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_ZIP" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_Password" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_Password" min="-2" pref="130" max="-2" attributes="0"/>
                   <Component id="lbl_FirstName" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl_RepeatPassword" min="-2" max="-2" attributes="0"/>
                   <Component id="tf_FirstName" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="tf_RepeatMail" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="tf_RepeatPassword" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="lbl_StreetHouse" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="tf_StreetHouse" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="tf_PhoneNumber" min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="lbl_PhoneNumber" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_Street" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_Street" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_Mail" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_Mail" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="jdc_Birthday" max="32767" attributes="0"/>
+                      <Component id="lbl_Birthday" min="-2" pref="130" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbl_City" min="-2" max="-2" attributes="0"/>
                   <Component id="tf_City" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_RepeatPassword" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_RepeatPassword" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_LastName" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_LastName" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lbl_Gender" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcb_Gender" alignment="0" pref="130" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_RepeatMail" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="tf_PhoneNumber" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="lbl_PhoneNumber" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_Housenumber" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tf_Housenumber" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="btn_Register" max="32767" attributes="0"/>
-                  <Component id="jdc_Birthday" pref="130" max="32767" attributes="0"/>
-                  <Component id="lbl_Birthday" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btn_Register" min="-2" pref="130" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbl_FirstName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_Username" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="lbl_Username" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_Username" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_Gender" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jcb_Gender" min="-2" pref="39" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tf_Username" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="tf_FirstName" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_LastName" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_LastName" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_FirstName" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_FirstName" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_Mail" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_City" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_City" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_ZIP" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_ZIP" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="lbl_Street" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_Street" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="lbl_Housenumber" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_Housenumber" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tf_RepeatMail" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="tf_Mail" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_RepeatMail" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_RepeatMail" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_Mail" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_Mail" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_Password" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_RepeatPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tf_Password" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="tf_RepeatPassword" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_RepeatPassword" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_RepeatPassword" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_Password" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tf_Password" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="lbl_Icon" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jcb_AcceptPolicy" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="lbl_LastName" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_Birthday" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tf_LastName" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="jdc_Birthday" min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="lbl_StreetHouse" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tf_StreetHouse" min="-2" pref="37" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="lbl_ZIP" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tf_ZIP" min="-2" pref="37" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lbl_Gender" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jcb_Gender" min="-2" pref="39" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="lbl_City" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tf_City" min="-2" pref="37" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lbl_PhoneNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tf_PhoneNumber" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jcb_AcceptPolicy" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lbl_Birthday" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jdc_Birthday" min="-2" pref="37" max="-2" attributes="0"/>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
               <Component id="btn_Register" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -213,7 +235,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbl_Birthday">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Birthday"/>
       </Properties>
     </Component>
@@ -375,19 +396,34 @@
         <Property name="text" type="java.lang.String" value="Last Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_StreetHouse">
+    <Component class="javax.swing.JLabel" name="lbl_Street">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Street, Housenumber"/>
+        <Property name="text" type="java.lang.String" value="Street"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tf_StreetHouse">
+    <Component class="javax.swing.JTextField" name="tf_Street">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Street, Housenumber"/>
+        <Property name="text" type="java.lang.String" value="Street"/>
       </Properties>
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_StreetHouseFocusGained"/>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_StreetHouseFocusLost"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_StreetHouseActionPerformed"/>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_StreetFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_StreetFocusLost"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_StreetActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_Housenumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Housenumber"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tf_Housenumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Housenumber"/>
+      </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_HousenumberFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tf_HousenumberFocusLost"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_HousenumberActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
