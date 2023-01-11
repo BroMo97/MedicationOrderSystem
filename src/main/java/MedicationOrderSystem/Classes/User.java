@@ -2,6 +2,7 @@ package MedicationOrderSystem.Classes;
 import java.time.LocalDateTime;
 
 import MedicationOrderSystem.Handler.*;
+import ENUMs.*;
 /**
  * Class which monitors and maintains the data of users of the project
  * @author patricia
@@ -13,30 +14,28 @@ public class User {
     private String surname = null;
     private String username = null;
     private String email = null;
-    private int role = 0;
+//    private int role = 0;
 // ---- hier bitte getter setter einfügen und in Constructor hinzufügen ----     
-    private String gender = null; 
+    private Gender gender = null; 
     private String address = null; 
     private LocalDateTime birthday = null;
     private String phone = null;
-    
-    private enum Rank{CUSTOMER, ADMIN};
     private Rank userRank;
     
     
     //Constructor
-    public User(String name, String surname, String username, String email, int role, String gender, String address,LocalDateTime birthday,String phone, Rank _userRank ) 
+    public User(String name, String surname, String username, String email, Gender gender, String address,LocalDateTime birthday,String phone, Rank _userRank ) 
     {
         this.setFirstname(name);
         this.setLastname(surname);
         this.setUsername(username);
         this.setEmail(email);
-        this.setRole(role); //LASS EIN ENUM VERWENDEN
+//        this.setRole(role); //LASS EIN ENUM VERWENDEN
         this.setGender(gender);
         this.setAddress(address);
         this.setBirthday(birthday);
         this.userRank = _userRank;
-        //    this.setPassword(password);
+        // this.setPassword(password);
     }
 
     public String getFirstname() {
@@ -80,19 +79,19 @@ public class User {
 //        return "User";
 //    }
 
-    public int getRole() {
-        return role;
-    }
+//    public int getRole() {
+//        return role;
+//    }
 
-    public void setRole(int _role) {
-        role = _role;
-    }
+//    public void setRole(int _role) {
+//        role = _role;
+//    }
 
-    public String getGender (){
+    public Gender getGender (){
         return gender;
     }
 
-    public void setGender(String _gender){
+    public void setGender(Gender _gender){
         gender = _gender; 
     }
 
@@ -129,6 +128,15 @@ public class User {
                 + this.getLastname();
                 
     }
+
+    public Rank getUserRank() {
+        return userRank;
+    }
+
+    public void setUserRank(Rank userRank) {
+        this.userRank = userRank;
+    }
+    
     
     
     @Override

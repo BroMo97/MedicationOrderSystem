@@ -5,11 +5,14 @@
 package MedicationOrderSystem.Forms;
 
 
+import MedicationOrderSystem.Classes.*;
 import MedicationOrderSystem.Forms.UserGUI;
 import MedicationOrderSystem.Forms.RegistrationGUI;
+import MedicationOrderSystem.Handler.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /**
  *
@@ -94,6 +97,11 @@ public class LoginGUI extends javax.swing.JFrame {
                 tf_UsernameFocusLost(evt);
             }
         });
+        tf_Username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_UsernameActionPerformed(evt);
+            }
+        });
         tf_Username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 tf_UsernameKeyPressed(evt);
@@ -113,6 +121,11 @@ public class LoginGUI extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tf_PasswordFocusLost(evt);
+            }
+        });
+        tf_Password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_PasswordActionPerformed(evt);
             }
         });
         tf_Password.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -203,7 +216,15 @@ public class LoginGUI extends javax.swing.JFrame {
 
     private void btn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LoginActionPerformed
         // TODO add your handling code here:
-        new UserGUI().setVisible(true);
+        
+        DatabaseHandler dbhandler = new DatabaseHandler();
+       
+        User user = dbhandler.checkifUserExists(tf_Username.getText(),tf_Password.getText());
+        
+        if(user==null){
+            JOptionPane.showMessageDialog(null, "Wrong Input!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        new UserGUI().setVisible(true); //öffnet home screen
         dispose();
     }//GEN-LAST:event_btn_LoginActionPerformed
 
@@ -215,6 +236,14 @@ public class LoginGUI extends javax.swing.JFrame {
             btn_Login.doClick();
         }
     }//GEN-LAST:event_tf_UsernameKeyPressed
+
+    private void tf_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_UsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_UsernameActionPerformed
+
+    private void tf_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_PasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_PasswordActionPerformed
 
     /**
      * @param args the command line arguments

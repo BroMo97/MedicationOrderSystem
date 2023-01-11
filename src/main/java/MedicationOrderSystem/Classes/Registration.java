@@ -1,5 +1,7 @@
 package MedicationOrderSystem.Classes;
 import MedicationOrderSystem.Handler.*;
+import ENUMs.*;
+import java.time.LocalDateTime;
 
 
 public class Registration {
@@ -10,6 +12,11 @@ public class Registration {
     private String password = null;
     private String confirm_email = null;
     private String confirm_password = null;
+    private Gender gender = null; 
+    private String address = null; 
+    private LocalDateTime birthday = null;
+    private String phone = null;
+    private Rank userRank;
 
     public Registration(String username, String firstName, String lastName, String email, String password,
                         String confirm_email, String confirm_password) 
@@ -70,7 +77,7 @@ public class Registration {
             this.email = email;
         }
     }
-
+    
     public String getPassword() {
         if(password!=null)
             return password;
@@ -106,4 +113,46 @@ public class Registration {
             this.confirm_password = confirm_password;
         }
     }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public LocalDateTime getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDateTime birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Rank getUserRank() {
+        return userRank;
+    }
+
+    public void setUserRank(Rank userRank) {
+        this.userRank = userRank;
+    }
+    
+    
 }

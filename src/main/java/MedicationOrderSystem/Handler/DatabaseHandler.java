@@ -49,8 +49,8 @@ public class DatabaseHandler {
             st.setString(5, password);
             st.setString(6, "0");
             st.setString(7, user.getUsername());
-            st.setString(8, user.getGender());
-            st.setString(9, String.valueOf(user.getRole()));
+            st.setString(8, user.getGender().toString());
+            st.setString(9, user.getUserRank().toString());
             st.setString(10, user.getEmail());
             st.setString(11, user.getPhone());
             st.executeUpdate();
@@ -89,14 +89,35 @@ public class DatabaseHandler {
     
     /**
      * Checks whether an Email has already been taken
+     * @param mail
      * @param toBeChecked
      * @return true, if the Email is available, false else
      */
-    public boolean UserEmailAvailable(Registration toBeChecked) {
+    
+    //Würde ich löschen, hab darunter meine Lösung ~lauryn
+//    public boolean UserEmailAvailable(Registration toBeChecked) {
+//
+//        String sql = "Select  email FROM user WHERE email = ? AND deleted = 0;";
+//        try ( PreparedStatement st = con.prepareStatement(sql)) {
+//            st.setString(1, toBeChecked.getEmail());
+//            try ( ResultSet rs = st.executeQuery()) {
+//                if (rs.next()) {
+//                    return false;
+//                }
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(DatabaseHandler.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return true;
+//    }
+    
+//Checken muss schon passieren bevor die eingaben als registration zusammengepackt werden
+
+        public boolean UserEmailAvailable(String mail) {
 
         String sql = "Select  email FROM user WHERE email = ? AND deleted = 0;";
         try ( PreparedStatement st = con.prepareStatement(sql)) {
-            st.setString(1, toBeChecked.getEmail());
+            st.setString(1, mail);
             try ( ResultSet rs = st.executeQuery()) {
                 if (rs.next()) {
                     return false;
@@ -110,13 +131,35 @@ public class DatabaseHandler {
 
      /**
      * Checks whether a username has already been taken
+     * @param name
      * @param toBeChecked
      * @return true, if username is available, false else
      */
-    public boolean UserNameAvailable(Registration toBeChecked) {
-        String sql = "Select username FROM user WHERE username =? AND deleted = 0;";
+    
+    //Würde ich löschen, hab darunter meine Lösung ~lauryn
+//    public boolean UserNameAvailable(Registration toBeChecked) {
+//        String sql = "Select username FROM user WHERE username =? AND deleted = 0;";
+//        try ( PreparedStatement st = con.prepareStatement(sql)) {
+//            st.setString(1, toBeChecked.getUsername());
+//            try ( ResultSet rs = st.executeQuery()) {
+//                if (rs.next()) {
+//                    return false;
+//                }
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(DatabaseHandler.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return true;
+//
+//    }
+
+    
+    
+    //Checken muss schon passieren bevor die eingaben als registration zusammengepackt werden
+    public static boolean UserNameAvailable(String name) {
+        String sql = "Select username FROM user WHERE username =? AND deleted = 0";
         try ( PreparedStatement st = con.prepareStatement(sql)) {
-            st.setString(1, toBeChecked.getUsername());
+            st.setString(1, name);
             try ( ResultSet rs = st.executeQuery()) {
                 if (rs.next()) {
                     return false;
@@ -128,19 +171,20 @@ public class DatabaseHandler {
         return true;
 
     }
-
+    
+    
     /**
      * Function to edit information of a {@link User}
      * @param user which will be edited
      */         
     public void EditUser(User user) {    
-        String sql = "Update user SET email = ?, firstName = ?, lastName = ?, admin = ? WHERE username = ?";
+        String sql = "Update user SET email = ?, firstName = ?, lastName = ?, role = ? WHERE username = ?";
         try { 
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, user.getEmail());
             ps.setString(2, user.getFirstname());
             ps.setString(3, user.getLastname());
-            ps.setString(4, String.valueOf(user.getRole()));
+            ps.setString(4, user.getUserRank().toString());
             ps.setString(5, user.getUsername());            
             ps.executeUpdate();
         } catch (SQLException ex) {
@@ -262,7 +306,7 @@ public class DatabaseHandler {
             st.setString(1, user.getFirstname());
             st.setString(2, user.getLastname());
             st.setString(3, user.getEmail());
-            st.setString(4, String.valueOf(user.getRole()));
+            st.setString(4, user.getUserRank().toString());
             st.setString(5, user.getUsername());
             st.executeUpdate();
         } catch (SQLException ex) {

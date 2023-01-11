@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -207,6 +208,11 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         jcb_AcceptPolicy.setText("Agree to our privacy policy");
         jcb_AcceptPolicy.setToolTipText("");
+        jcb_AcceptPolicy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb_AcceptPolicyActionPerformed(evt);
+            }
+        });
 
         btn_Register.setText("Register");
         btn_Register.addActionListener(new java.awt.event.ActionListener() {
@@ -661,6 +667,10 @@ public class RegistrationGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_CityActionPerformed
 
     private void btn_RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegisterActionPerformed
+        //Password check
+        if(!checkMail()||!checkUsername()||!checkPass()||!allFilled()||!checkPolicy())
+            return;
+        
         Registration registerUser = new Registration(tf_Username.getText(), tf_FirstName.getText(), tf_LastName.getText(), tf_Password.getText(), tf_Mail.getText(), tf_RepeatPassword.getText(), tf_RepeatMail.getText());
         UserHandler userHandler = new UserHandler();
         EncryptionHandler encrypt = new EncryptionHandler();
@@ -671,6 +681,58 @@ public class RegistrationGUI extends javax.swing.JFrame {
         encrypt.encryptPassword(tf_Password.getText(), tf_Username.getText());
 
     }//GEN-LAST:event_btn_RegisterActionPerformed
+
+    private boolean checkPass(){
+       boolean out = true;
+       String password = tf_Password.getText();
+        
+        if(!password.matches(".*[!@#$%^&*()_+=\\-].*"))out = false; //1+ special character
+        else if(!password.matches(".*[A-Z].*")) out = false;        //1+ uppercase
+        else if(!password.matches(".*[0-9].*")) out = false;        //1+ number
+        else if(password.length() <= 8) out = false;                //8+ characters
+
+        if(out==false)
+            JOptionPane.showMessageDialog(null, "Password requirements:\n8 or more characters\n1 or more special characters\n1 or more Uppercase characters\n1 or more Numbers", "Warning", JOptionPane.WARNING_MESSAGE);
+        
+        return out;
+    }
+    
+    private boolean allFilled(){
+        JTextField[] textFields = {tf_Username, tf_FirstName, tf_LastName, tf_Password, tf_Mail, tf_RepeatPassword, tf_RepeatMail};
+        for (JTextField textField : textFields) {
+            if (textField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "All Fields must be filled!", "Warning", JOptionPane.WARNING_MESSAGE);
+                return false;
+            }
+        }        
+        return true;
+    }
+    
+    private boolean checkPolicy(){
+        if(jcb_AcceptPolicy.isSelected()==false){
+           JOptionPane.showMessageDialog(null, "Please agree to our Policy", "Warning", JOptionPane.WARNING_MESSAGE);
+           return false; 
+        }
+        return true;
+    }
+    
+    private boolean checkMail(){
+        if(DatabaseHandler.UserNameAvailable(tf_Mail.getText())==false){
+            JOptionPane.showMessageDialog(null, "E-Mail already taken!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }
+        return true;
+    }
+    
+    private boolean checkUsername(){
+        if(DatabaseHandler.UserNameAvailable(tf_Username.getText())==false){
+            JOptionPane.showMessageDialog(null, "Username already taken!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }
+        return true;
+    }
+    
+    
 
     private void tf_LastNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_LastNameFocusGained
         // TODO add your handling code here:
@@ -707,6 +769,10 @@ public class RegistrationGUI extends javax.swing.JFrame {
     private void tf_HousenumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_HousenumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_HousenumberActionPerformed
+
+    private void jcb_AcceptPolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_AcceptPolicyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcb_AcceptPolicyActionPerformed
 
     
     /**

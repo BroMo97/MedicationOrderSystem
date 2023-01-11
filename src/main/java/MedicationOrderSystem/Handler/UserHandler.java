@@ -53,12 +53,18 @@ public class UserHandler {
             if(!EmailAvailable || !UsernameAvailable)
                 return createdUser;
             
+            // public User(String name, String surname, String username, String email,
+            // String gender, String address,LocalDateTime birthday,String phone, Rank _userRank ) 
             createdUser = 
                     new User(toBeCreated.getFirstName(),
                              toBeCreated.getLastName(),
                              toBeCreated.getUsername(),
                              toBeCreated.getEmail(), 
-                             false);
+                             toBeCreated.getGender(),
+                             toBeCreated.getAddress(),
+                             toBeCreated.getBirthday(),
+                             toBeCreated.getPhone(),
+                             toBeCreated.getUserRank());
             
             
             
